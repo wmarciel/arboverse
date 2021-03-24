@@ -1,31 +1,66 @@
-body{
-    font-size: 16px;
-    font-family: lato, sans-serif,serif;
-    background-color: #dddde0;
-    margin: 0 auto;
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: 0;
-  }
+}
 
+body{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif,serif;
+    background-color: hsl(0, 0%, 98%);
+    margin: 0 auto;
+}
 /*NAVIGATOR*/
+.bannermenu{
+    background-image: linear-gradient(to right bottom, hsla(212, 100%, 14%,0.4),transparent),
+                    url("/Resources/images/pexels-sam-kolder-2387877.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+}
+.bannermenu h1{
+    font-family: 'Monteserrat', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-align: center;
+    padding-top: 35vh;
+    color:white;
+}
+.bannermenu h3{
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
+/* NAV BAR*/
 nav{
   display: flex;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
-  background-color: #002147;
+  background: linear-gradient(180deg, hsla(209, 100%, 13%,0.8),hsla(209, 100%, 13%,0.5),transparent);
   height: 11vh;
   font-family: 'Montserrat', sans-serif;
-  position: fixed;
-  z-index: 99;
+  position:fixed;
+  z-index: 1;
   top:0;
-  width:100%;
+  left: 0;
+}
+.hl{
+    width:90%;
+    margin:0 auto;
+    border-bottom: solid 1px hsl(0, 0%, 100%, 1);
+    position: relative;
+    top:11vh;
 }
 nav img{
-  width: 9%;
-  height: 9%;
+  width: 10%;
+  height: 10%;
   margin-right: 10px;
 }
 .logo{
@@ -34,7 +69,7 @@ nav img{
   color:rgb(255, 255, 255);
   text-transform: uppercase;
   font-size: 1.3rem;
-  padding-left: 15px;
+  padding-left: 5%;
 }
 .logo span{
   color:#ff8700;
@@ -42,17 +77,28 @@ nav img{
 .nav-links{
   display: flex;
   justify-content: space-around;
-  width: 50%
+  width: 50%;
 }
 .nav-links li{
   list-style: none ;
+  font-weight: bold;
 }
 .nav-links a{
   color: white;
   text-decoration: none;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   font-size: 1rem;
+  padding: 5px;
+  margin: 5px;
 }
+.nav-links a:hover{
+    color:#002147;
+    background-color:hsla(0, 0%, 100%, 0.4);
+    border-radius: 10px;
+}
+
+/*Burger features*/
 .burger{
   display: none;
 }
@@ -73,16 +119,17 @@ nav img{
 
 /* NAVIGATOR TABLET SIZE*/
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
   body{
     overflow-x:hidden ;
   }
+  
   .nav-links{
     position: absolute;
-    right: 0px;
-    height:39vh;
-    top: 11vh;
-    background-color: hsla(212, 69%, 28%,0.85);
+    right:0;
+    height:45vh;
+    top: 12vh;
+    background: linear-gradient(to bottom, hsla(212, 69%, 28%,0.7), hsla(212, 69%, 28%,0.4));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,6 +142,7 @@ nav img{
   }
   .burger {
     display: block;
+    margin-right:30px;
   }
   .nav-active{
     transform: translateX(0%);
@@ -137,13 +185,17 @@ nav img{
         width: 11%;
         height:11%;
     }
+    .burger{
+        margin-right:20px;
+    }
     .burger div{
         width: 25px;
         height:3px;
         margin-right: 15px;
     }
     .nav-links{
-        top:8vh;
+        top:9vh;
+        height:39vh
     }
     .toggle .line1{
         transform: rotate(-45deg) translate(-5px,4px);
@@ -164,6 +216,9 @@ nav img{
     nav img{
         width:7%;
         height: 7%;
+    }
+    .hl{
+        padding-bottom: 10px;
     }
     .burger div{
         width: 25px;
@@ -189,40 +244,65 @@ nav img{
       }
 }
 
-/*BANNER*/
-#bannerindex{
-    margin-top: 11vhs;
+/* BANNER TABLET SIZE*/
+@media screen and (max-width:900px){
+    .bannermenu{
+        height:25rem;
+        background-position: bottom;
+    }
+    .hl{
+        top: 12vh;
+    }
+    .bannermenu h1{
+        font-size: 2.7rem;
+        padding-top: 27vh;
+        letter-spacing: 1px;
+    }
+    .bannermenu h3 {
+        font-size: 1.2rem;
+    }
 }
-.banner{
-    background-image: url("/Resources/images/banneramazon.jpeg");
-    background-position:bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 38rem;
+
+/*BANNER MOBILE SIZE*/
+@media screen and (max-width:450px){
+    .bannermenu{
+        height:20rem;
+        background-position:bottom;
+    }
+    .bannermenu h1{
+        padding-top: 20vh;
+        font-size: 1.8rem;
+    }
+    .bannermenu h3{
+        font-size: 0.9rem;
+    }
+    .hl{
+        top: 8vh;
+    }
+    
 }
-.banner h1{
-    font-family: lato, sans-serif, arial;
-    font-size: 3rem;
+.commingsoon{
+    height: 100vh;
+    background: #03050A;
+    background-position: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: cover;
+}
+.commingsoon h1{
     text-align: center;
-    padding-top: 15rem;
     color:white;
+    font-family: 'montserrat', sans-serif;
 }
-.banner h3{
-    font-family: lato, sans-serif, arial;
-    text-align:center;
-    font-size: 1.2rem;
-    color: white;
-}
-/*FOOTER*/
+/*footer*/
 footer{
-    background-color: #002147;
+    background-color: hsla(0, 0%, 35%,0.7);
     font-family: robot, sans-serif, arial;
     color: white;
     display: flex;
     justify-content: space-between;
-    font-size: 0.7rem;
-    padding: 0 30px;
-    border-radius: 8px;
-}
-
+    align-content: center;
+    font-size: 0.8rem;
+    padding: 5px 30px;
+  }

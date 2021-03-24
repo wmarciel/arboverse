@@ -1,0 +1,141 @@
+body{
+    font-size: 16px;
+    font-family: lato, sans-serif,serif;
+    background-color:hsl(0, 0%, 95%);
+    margin: 0 auto;
+}
+/*Navegador*/
+nav{
+    background-color: #002147;
+    font-size: 1.1rem;
+    font-family: lato, sans-serif, arial;
+    padding: 5px 15px;
+    border-radius: 8px;
+    width:100%;
+    position: fixed;
+    z-index: 2;
+    margin: 0 auto;
+    top:0;
+}
+#navegador-desktop{
+    display: flex;
+    flex-wrap: nowrap;
+    color: white;
+    height: 65px;
+    padding: 5px 15px;
+}
+.logo {
+    font-family: montserrat, lato, sans-serif, arial;
+    font-size: 0.8rem;
+    display: flex;
+    margin: auto 0;
+}
+.logo a{
+    text-decoration: none;
+    color:white
+}
+.logo h1{
+    padding-top: 3px;
+    padding-left: 5px;
+}
+h1 .color{
+    color:#ff8700;
+}
+.logo img {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+#navegador-desktop .menu{
+    margin: auto 0;
+}
+.menu li{
+    display: inline;
+    font-family: lato, sans-serif, arial;
+}
+.menu a {
+    text-decoration:none;
+    color: white;
+    padding: 0 10px;
+}
+/*BANNER*/
+#bannerindex{
+    margin-top: 70px;
+}
+.banner{
+    background-image: url("/Resources/images/bannerbio2.jpg");
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 30rem;
+}
+.banner h1{
+    font-family: lato, sans-serif, arial;
+    font-size: 3.5rem;
+    text-align: center;
+    padding-top: 10rem;
+    color: white;
+}
+.banner h3{
+    font-family: lato, sans-serif, arial;
+    text-align:center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* CALENDAR */
+#calendar {
+    font-family: lato, serif;
+    width: 75%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#jerry{
+    padding-right: 10px;
+    display: flex;
+}
+.events{
+    width: 20%;
+    margin: 0 auto;
+    font-family: lato, sans-serif;
+    font-size: 1rem;
+    color:grey;
+    text-align: center;
+    padding-top: 30px;
+    border-bottom: solid 0.4px rgba(121, 118, 118,0.3);
+}
+.twitterbox{
+    width: 22%;
+    height: 80px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+.news{
+    width: 20%;
+    margin: 0 auto;
+    font-family: lato, sans-serif;
+    font-size: 1rem;
+    color:grey;
+    text-align: center;
+    padding-top: 30px;
+    border-bottom: solid 0.4px rgba(121, 118, 118,0.3)
+}
+.thenews{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+.thenewsunit{
+    text-align: center;
+    font-family: lato, serif;
+    font-size: 2rem;
+    color: gray;
+    display: block;
+    margin:10px;
+    width:30%;
+    height:300px;
+    background: linear-gradient(45deg, #6ac1c5, #bda5ff);
+}

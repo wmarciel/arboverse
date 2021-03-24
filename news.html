@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="Resources/css/news.css" rel="stylesheet" type="text/css">
+        <link href="Resources/calendar/evo-calendar.css" rel="stylesheet" type="text/css"/>
+        <link href="Resources/calendar/evo-calendar.midnight-blue.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="sortcut icon" href="Resources/images/Arboverse_logo-2.png" type="image/png"/>
+        <title>News</title>
+    </head>
+    <body>
+        <!--Navegador-->
+        <nav>
+            <div id="navegador-desktop">
+                <div class="logo">
+                <img src="Resources/images/Arboverse_logo-2.png"/>
+                <h1><a href="Index.html"> ARBO<span class="color">VERSE</span></a></h1>
+                </div>
+                <div class="menu">
+                <ul>
+                    <li><a href="index.html" aria-label="Link for home">HOME</a></li>
+                    <li><a href="arboverse.html" aria-label="Link for arboverse plattform">ARBOVERSE</a></li>
+                    <li><a href="research.html" aria-label="Link for research">RESEARCH</a></li>
+                    <li><a href="publications.html" aria-label="Link for publications">PUBLICATIONS</a></li>
+                    <li><a href="collaborators.html" aria-label="Link for collaborators">PEOPLE</a></li>
+                    <li><a href="news.html" aria-label="Link for biography">NEWS</a></li>
+                </ul>
+                </div>
+            </div>
+            <!--DESPOIS ADD NAVEGADOR PARA MOBILE-->
+        </nav>
+        <header>
+        <div id="bannerindex">
+            <div class="banner">
+                <h1>Events</h1>
+                <h3>Meeting & Course | Fellowship & Scolarship  | Grants </h3>
+            </div>
+        </div>
+        </header>
+        <main>
+        <div class="events">
+          <h1> Events </h1>
+        </div>
+        <div id="jerry">
+            <div id="calendar"></div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="Resources/calendar/evo-calendar.js"></script>
+
+            <script>
+      $(document).ready(function() {
+    $('#calendar').evoCalendar({
+
+    theme: 'Midnight Blue',    
+    calendarEvents: [
+      {
+        id: 'bHay68s', // Event's ID (required)
+        name: "Java", // Event name (required)
+        date: "March/8/2021", // Event date (required)
+        type: "holiday", // Event type (required)
+        everyYear: false // Same event every year (optional)
+      },
+      {
+        name: "Fellowship",
+        badge: "03/08 - 03/10", // Event badge (optional)
+        date: ["March/08/2021", "March/15/2021"], // Date range
+        description: "Vacation fellowship.", // Event description (optional)
+        type: "event",
+        color: "800080" // Event custom color (optional)
+      },
+      {
+        name: "grant",
+        badge: "03/08 - 03/10", // Event badge (optional)
+        date: ["March/20/2021", "March/25/2021"], // Date range
+        description: "Mini grant", // Event description (optional)
+        type: "grant",
+        color: "7a297a" // Event custom color (optional)
+      }
+    ]
+  });
+})
+            </script>
+            <div class="twitterbox">
+              <a class="twitter-timeline" data-width="1200" data-height="550" href="https://twitter.com/wmarciels?ref_src=twsrc%5Etfw">Tweets by wmarciels</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+         </div>
+        <div class="news">
+          <h1>Keep Following</h1>
+        </div>
+          <div class="thenews">
+            <div class="thenewsunit">
+              <h6>News 1</h6>
+            </div>
+            <div class="thenewsunit">
+              <h6>News 2</h6>
+            </div>
+            <div class="thenewsunit">
+              <h6>News 3</h6>
+            </div>
+          </div>
+        </main> 
+    </body>
+</html>

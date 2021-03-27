@@ -11,6 +11,8 @@ body{
   }
 
 /*NAVIGATOR*/
+
+/*Banner*/
 .bannermenu{
     background-image: linear-gradient(to right bottom, hsla(212, 100%, 14%,0.4),transparent),
                     url("/Resources/images/Index/banner1.jpg");
@@ -43,7 +45,7 @@ nav{
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(180deg, hsla(209, 100%, 13%,0.8),hsla(209, 100%, 13%,0.5),transparent);
+  background: linear-gradient(180deg, hsla(209, 100%, 13%,0.8),hsla(209, 100%, 13%,0.6), hsla(209, 100%, 13%,0.4),transparent);
   height: 11vh;
   font-family: 'Montserrat', sans-serif;
   position:fixed;
@@ -63,6 +65,7 @@ nav img{
   height: 10%;
   margin-right: 10px;
 }
+/*LOGO*/
 .logo{
   display: flex;
   align-items: center;
@@ -74,6 +77,7 @@ nav img{
 .logo span{
   color:#ff8700;
 }
+/*NAV LINKS*/
 .nav-links{
   display: flex;
   justify-content: space-around;
@@ -91,14 +95,18 @@ nav img{
   font-size: 1rem;
   padding: 5px;
   margin: 5px;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
 }
 .nav-links a:hover{
     color:#002147;
     background-color:hsla(0, 0%, 100%, 0.4);
-    border-radius: 10px;
+}
+.nav-links a:active{
+    background-color:hsla(0, 0%, 100%, 0.9);
 }
 
-/*Burger features*/
+/*Burger Menu*/
 .burger{
   display: none;
 }
@@ -295,8 +303,9 @@ nav img{
     padding: 30px;
 }
 .content h2{
-    font-family: 'montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'oswald', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
     text-align: center;
     width: 90%;
     margin: 0 auto;
@@ -304,8 +313,8 @@ nav img{
     padding-bottom: 15px;
 }
 .content p{
-    padding-top: 35px;
-    font-family: 'Red Hat Display', sans-serif;;
+    padding-top: 25px;
+    font-family: 'Quattrocento', Serif;
     width: 90%;
     margin: 0 auto;
     color:#666569;
@@ -371,7 +380,10 @@ section{
     position: relative;
     margin-bottom: 1%;
 }
-.title-how h1{
+.title-how h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
     width:30%;
 }
 .purpose{
@@ -393,12 +405,14 @@ section{
     margin: 0 auto;
     padding: 20px;
 }
-.purpose-unit h3{
+.purpose-unit h4{
+    font-family: 'oswald', sans-serif;
     margin-top: 10px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #002147;
 }
 .purpose-unit h5{
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 400;
 }
@@ -466,10 +480,15 @@ aside{
     margin: 80px 0;
 }
 aside p{
+    font-family: 'Quattrocento', sans-serif;
     width: 70%;
     margin: 0 auto;
     text-align: justify;
     line-height: 2;
+    color:#666569;
+    line-height: 2;
+    font-size: 1.1rem;
+    word-spacing: 2px;
 }
 .video{
     text-align: center;
@@ -479,7 +498,9 @@ aside p{
     justify-content: center;
 }
 .video h2{
-    font-size: 1.6rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
     font-weight: 500;
     margin-bottom: 40px;
 }
@@ -537,8 +558,10 @@ aside p{
     color:rgb(110, 108, 108);
 }
 .mainfunding h2{
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
     width:35%;
 }
 .hl4{
@@ -599,7 +622,7 @@ aside p{
     padding-top: 60px;
     text-align: center;
 }
-.media h4{
+.media h5{
     font-family: 'Montserrat', sans serif, arial;
     font-weight: 400;
     font-size: 1rem;

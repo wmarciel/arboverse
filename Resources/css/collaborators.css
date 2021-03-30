@@ -407,7 +407,7 @@ transform: rotate(45deg) translate(-5px,-6px);
   justify-content: center;
 }
 .card__face--back {
-  background-color: var(--light);
+  background-color: white;
   transform: rotateY(180deg);
 }
 .card__content {

@@ -299,7 +299,7 @@ transform: rotate(45deg) translate(-5px,-6px);
   border-bottom: solid 1px hsla(0, 0%, 50%, 0.5);
 }
 .single-team img {
-  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 .single-team {
   width: 300px;

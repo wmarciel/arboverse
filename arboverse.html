@@ -1,67 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
-        <meta charset="UTF-8">
-        <link rel="preconnect" href="https://fonts.gstatic.com"> 
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="Resources/css/arboverse.css">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
-        <link rel="sortcut icon" href="Resources/images/Arboverse_logo-2.png" type="image/png"/>
-        <title>Arboverse plattform</title>
-    </head>
-    <body>
-      <!--NAVEGADOR-->
-      <div class="bannermenu">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Resources/css/arboverse.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="sortcut icon" href="Resources/images/Arboverse_logo-2.png" type="image/png" />
+    <title>Arboverse plattform</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    <style>
+        #map-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        #map {
+            position: relative;
+            height: inherit;
+            width: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <!--NAVEGADOR-->
+    <div class="bannermenu">
         <nav>
             <div class="logo">
                 <img src="Resources/images/Arboverse_logo-2.png">
                 <h4>ARBO<span>VERSE</span></h4>
             </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" aria-label="Link for home">HOME</a></li>
-                    <li><a href="arboverse.html" aria-label="Link for arboverse plattform">ARBOVERSE</a></li>
-                    <li><a href="research.html" aria-label="Link for research">RESEARCH</a></li>
-                    <li><a href="publications.html" aria-label="Link for publications">PUBLICATIONS</a></li>
-                    <li><a href="collaborators.html" aria-label="Link for collaborators">PEOPLE</a></li>
-                    <li><a href="news.html" aria-label="Link for biography">NEWS</a></li>
-                </ul>
+            <ul class="nav-links">
+                <li><a href="index.html" aria-label="Link for home">HOME</a></li>
+                <li><a href="arboverse.html" aria-label="Link for arboverse plattform">ARBOVERSE</a></li>
+                <li><a href="research.html" aria-label="Link for research">RESEARCH</a></li>
+                <li><a href="publications.html" aria-label="Link for publications">PUBLICATIONS</a></li>
+                <li><a href="collaborators.html" aria-label="Link for collaborators">PEOPLE</a></li>
+                <li><a href="news.html" aria-label="Link for biography">NEWS</a></li>
+            </ul>
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-             </div>
+            </div>
         </nav>
         <!--Script scrool navbar-->
-            <script>
-                let navbar = document.querySelector('nav');
-                let scrollPrevisous = window.pageYOffset;
-                    window.onscroll = function(){
-                 let scrollCurent = window.pageYOffset;
-                    if(scrollPrevisous > scrollCurent){
-                         navbar.style.top = "0px";
-                    }else {
-                        navbar.style.top = "-90px";
-                    }
-                    scrollPrevisous = scrollCurent;
-                        }
-                </script>
-                    <div class="hl"></div>
-                <!--Script burgerbar toggler-->
-                <script src="js/main.js"></script>
-                <!--Banner information-->
-                    <h1>Arboverse</h1>
-                    <h3>Arbovirus | Disease | Ecology | Evolution</h3>
+        <script>
+            let navbar = document.querySelector('nav');
+            let scrollPrevisous = window.pageYOffset;
+            window.onscroll = function () {
+                let scrollCurent = window.pageYOffset;
+                if (scrollPrevisous > scrollCurent) {
+                    navbar.style.top = "0px";
+                } else {
+                    navbar.style.top = "-90px";
+                }
+                scrollPrevisous = scrollCurent;
+            }
+        </script>
+        <div class="hl"></div>
+        <!--Script burgerbar toggler-->
+        <script src="js/main.js"></script>
+        <!--Banner information-->
+        <h1>Arboverse</h1>
+        <h3>Arbovirus | Disease | Ecology | Evolution</h3>
     </div>
-        </nav>
-        <!--comming soon-->
-        <main>
-          <div class="commingsoon">
-            <h1>Comming Soon</h1>
-          </div>
-      </main>
-    </body>
-    <footer>
-        <p>© Copyrights 2021 - Arboverse | All rights reserved</p>
-        <p>Web developer | Atsuko </p>
-    </footer>
-</html>       
+    <!--comming soon-->
+    <main>
+        <div class="commingsoon">
+            <style>
+                #menu {
+                    background: #fff;
+                    position: relative;
+                    z-index: 1;
+                    top: 10px;
+                    right: 10px;
+                    border-radius: 3px;
+                    width: 220px;
+                    border: 1px solid rgba(0, 0, 0, 0.4);
+                    font-family: 'Open Sans', sans-serif;
+                }
+
+                #menu a {
+                    font-size: 13px;
+                    color: #404040;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    padding: 10px;
+                    text-decoration: none;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+                    text-align: center;
+                }
+
+                #menu a:last-child {
+                    border: none;
+                }
+
+                #menu a:hover {
+                    background-color: #f8f8f8;
+                    color: #404040;
+                }
+
+                #menu a.active {
+                    background-color: #3887be;
+                    color: #ffffff;
+                }
+
+                #menu a.active:hover {
+                    background: #3074a4;
+                }
+            </style>
+
+
+            <nav id="menu"></nav>
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+
+            <script>
+                // TO MAKE THE MAP APPEAR YOU MUST
+                // ADD YOUR ACCESS TOKEN FROM
+                // https://account.mapbox.com
+                mapboxgl.accessToken = '<token>';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    zoom: 2,
+                    center: [-47.9323, -25.0244]
+                });
+
+                // Wait until the map has finished loading.
+                map.on('load', function () {
+                    // Add source and layer for museums.
+                    map.addSource('museums', {
+                        type: 'vector',
+                        url: 'mapbox://mapbox.2opop9hr'
+                    });
+                    map.addLayer({
+                        'id': 'museums',
+                        'type': 'circle',
+                        'source': 'museums',
+                        'layout': {
+                            // Make the layer visible by default.
+                            'visibility': 'visible'
+                        },
+                        'paint': {
+                            'circle-radius': 8,
+                            'circle-color': 'rgba(55,148,179,1)'
+                        },
+                        'source-layer': 'museum-cusco'
+                    });
+
+                    // Add source and layer for contours.
+                    map.addSource('contours', {
+                        type: 'vector',
+                        url: 'mapbox://mapbox.mapbox-terrain-v2'
+                    });
+                    map.addLayer({
+                        'id': 'contours',
+                        'type': 'line',
+                        'source': 'contours',
+                        'source-layer': 'contour',
+                        'layout': {
+                            // Make the layer visible by default.
+                            'visibility': 'visible',
+                            'line-join': 'round',
+                            'line-cap': 'round'
+                        },
+                        'paint': {
+                            'line-color': '#877b59',
+                            'line-width': 1
+                        }
+                    });
+                });
+
+                // After the last frame rendered before the map enters an "idle" state.
+                map.on('idle', function () {
+                    // If these two layers have been added to the style,
+                    // add the toggle buttons.
+                    if (map.getLayer('contours') && map.getLayer('museums')) {
+                        // Enumerate ids of the layers.
+                        var toggleableLayerIds = ['contours', 'museums'];
+                        // Set up the corresponding toggle button for each layer.
+                        for (var i = 0; i < toggleableLayerIds.length; i++) {
+                            var id = toggleableLayerIds[i];
+                            if (!document.getElementById(id)) {
+                                // Create a link.
+                                var link = document.createElement('a');
+                                link.id = id;
+                                link.href = '#';
+                                link.textContent = id;
+                                link.className = 'active';
+                                // Show or hide layer when the toggle is clicked.
+                                link.onclick = function (e) {
+                                    var clickedLayer = this.textContent;
+                                    e.preventDefault();
+                                    e.stopPropagation();
+
+                                    var visibility = map.getLayoutProperty(
+                                        clickedLayer,
+                                        'visibility'
+                                    );
+
+                                    // Toggle layer visibility by changing the layout object's visibility property.
+                                    if (visibility === 'visible') {
+                                        map.setLayoutProperty(
+                                            clickedLayer,
+                                            'visibility',
+                                            'none'
+                                        );
+                                        this.className = '';
+                                    } else {
+                                        this.className = 'active';
+                                        map.setLayoutProperty(
+                                            clickedLayer,
+                                            'visibility',
+                                            'visible'
+                                        );
+                                    }
+                                };
+
+                                var layers = document.getElementById('menu');
+                                layers.appendChild(link);
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </main>
+</body>
+<footer>
+    <p>© Copyrights 2021 - Arboverse | All rights reserved</p>
+    <p>Web developer | Atsuko </p>
+</footer>
+
+</html>

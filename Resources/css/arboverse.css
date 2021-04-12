@@ -388,10 +388,11 @@ background-color:#BCC5CF;
 .sub-menu h3{
     font-family: 'montserrat', serif;
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 1rem;
     padding: 20px 0;
     margin-bottom:10px;
     color: var(--blue);
+    margin-left:20px;
 }
 /* discovery, distribution*/
 .sub-1{
@@ -423,7 +424,7 @@ background-color:#BCC5CF;
     font-family: 'montserrat', serif;
     font-weight: 500;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     padding: 10px 0;
     color: var(--blue);
 }

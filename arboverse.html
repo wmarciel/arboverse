@@ -13,21 +13,8 @@
     <link rel="sortcut icon" href="Resources/images/Arboverse_logo-2.png" type="image/png" />
     <title>Arboverse plattform</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
-    <style>
-        #map-container {
-            position: relative;
-            height: 100%;
-            width: 100%;
-        }
-
-        #map {
-            position: relative;
-            height: inherit;
-            width: inherit;
-        }
-    </style>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />  
 </head>
 
 <body>
@@ -79,7 +66,7 @@
             <h1>Catalogue here</h1>
         </div>
         <div class="grid">
-<!-- Main Menu Bar Filter-->
+    <!-- Main Menu Bar Filter-->
             <div id="menulateral">
                 <div class="item-button" id="discovery">
                     <div class="button-wrapper">
@@ -123,8 +110,65 @@
                         <span>Human Mobility</span>
                     </div>
                 </div>
+            </div><!--lateral menu side close-->
+    <!--Discovery Menu-->
+            <div id="discovery-menu" class="sub-menu sub-1">
+                <div class="title-sub">
+                    <h3>Virus discovery</h3><i class="fa fa-info-circle" style="color:gray"></i>
+                </div>
+                    <div class="info-input">
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Family</label>
+                    </div>
+                    <div class="info-input">
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Genus</label>
+                    </div>
+                    <div class="info-input">
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Species</label>
+                    </div>
             </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+            <script src="/js/menu.js"></script><!--Menu js-->
+            <script src="/resources/js/time.js"></script><!--time slider js-->
+            <div id="map" ></div>
+            <script>
+                //MapBox token
+                //Here Map box Token
+                mapboxgl.accessToken = 'pk.eyJ1IjoiamFjcXVlbGluZXRpZGEiLCJhIjoiY2tteHllYXVxMGQ4cTJycWtsbm1wYnNlZSJ9.WhX4YKrMo49sd5dA_JIMMw';
+                var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/light-v10', //type//
+                center: [-110, 37.8],
+                zoom: 1
+                });
+                 // Add zoom and rotation controls to the map.
+                 map.addControl(new mapboxgl.NavigationControl());
+                 
+                </Script>
+    
+        </div><!--grid close-->
+    
+    
+
+
+           
     </main>
 </body>
 <footer>

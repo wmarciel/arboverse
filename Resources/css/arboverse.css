@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -9,6 +9,17 @@ body{
     font-family: 'Montserrat', sans-serif,serif;
     background-color: hsl(0, 0%, 98%);
     margin: 0 auto;
+}
+:root{
+  --light-body: #c4c4c433;
+  --light-main:#efefef;
+  --light-hover: #DEE2E7;
+  --light-active: #FAA545;
+  --light-text: #ffffff;
+  --light-button: #ecf0f3;
+  --blue: #002147;
+  --orange: #ff8700;
+  --dark-text: #3f3f3f;
 }
 /*NAVIGATOR*/
 .bannermenu{
@@ -281,20 +292,69 @@ nav img{
     }
     
 }
-.commingsoon{
-    height: 100vh;
-    background: #03050A;
-    background-position: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: cover;
+/* Catalogue*/
+.catalogue{
+  margin-top: 10vh;
+  height: 30vh;
+  text-align: center;
 }
-.commingsoon h1{
-    text-align: center;
-    color:white;
-    font-family: 'montserrat', sans-serif;
+
+/* =======GRID=====*/
+.grid{
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
 }
+
+/*Main side menu*/
+#menulateral{
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  text-align: center;
+  grid-area: 1 / 1 / 10 / 2;
+  z-index: 10;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.title-sub{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+/*Main button side menu*/
+.item-button{
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--light-main);
+  border-bottom: solid 1px hsla(0, 0%, 50%, 0.3);
+}
+.item-button:hover{ 
+  background-color: var(--light-hover);
+}
+.btn-active{
+background-color:#BCC5CF;
+}
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*Main button Image side menu*/
+.button-wrapper img{
+  width: 50%;
+  height: 50%;
+}
+.button-wrapper span{
+  margin-top: 5px;
+  font-size: 0.6rem;
+  color: var(--dark-text);
+}
+
 /*footer*/
 footer{
     background-color: hsla(0, 0%, 35%,0.7);

@@ -301,7 +301,7 @@ nav img{
 
 /* =======GRID=====*/
 .grid{
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   display: grid;
@@ -320,10 +320,11 @@ nav img{
   margin-top: 3px;
 }
 .title-sub{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 /*Main button side menu*/
 .item-button{
@@ -424,7 +425,7 @@ background-color:#BCC5CF;
     font-family: 'montserrat', serif;
     font-weight: 500;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 10px 0;
     color: var(--blue);
 }
@@ -525,7 +526,7 @@ color:var(--dark-text);
   border-radius: 2px;
 }
 .point-mean{              /* point legend*/
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   margin-left: 8px;
   margin-bottom: 2px;
   color: var(--dark-text);
@@ -564,7 +565,7 @@ color:var(--dark-text);
 .percentage,
 .millions,
 .index{
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: var(--dark-text);
 }
 

@@ -484,6 +484,8 @@ color:var(--dark-text);
   margin-top: 5px;
   color:var(--dark-text);
   text-align: center;
+  font-size: 0.8rem;
+  font-weight: 400;
   padding-bottom: 2px;
   border-bottom: solid 1px hsla(0, 0%, 50%, 0.5);
 }

@@ -457,6 +457,7 @@ background-color:#BCC5CF;
 .fa-info-circle:hover::before{
   color:rgb(116, 115, 115);
 }
+/*tooltip of info icon*/
 .tooltip{
   position: relative;
 }
@@ -490,7 +491,46 @@ background-color:#BCC5CF;
   visibility: visible;
   opacity: 1;
 }
-
+/* tooltip of certain countries*/
+.tooltip2{
+  position: relative;
+  cursor:help;
+}
+.tooltip2 .tooltext2{
+  font-size: 0.75rem;
+  line-height: 1.5;
+  visibility: hidden;
+  width: 200px;
+  background-color: #BDD9F9;
+  color:var(--dark-text);
+  text-align: center;
+  padding: 8px 3px;
+  border-radius: 5px;
+  position: absolute;
+  bottom:110%;
+  left: 50%;
+  margin-left: -110px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip2 .tooltext2::after{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 90%;
+  border-style: solid;
+  border-color: #BDD9F9 transparent transparent transparent;
+}
+.tooltip2:hover .tooltext2{
+  visibility: visible;
+  opacity: 1;
+}
+.underline{
+  text-decoration: underline;
+  font-size: 0.7rem;
+  color: var(--dark-text);
+  
+}
 
 /* ======== Sub-menu of CLIMATE FOREST COVER AND LAND* ==========*/
 .menu-btn{
@@ -818,6 +858,7 @@ input:valid ~label{
 .box p{
     text-align: left;
     position: relative;
+    font-family: 'montserrat', serif;
     font-size: 0.8rem;
     bottom: 5px;
     left: 5px;
@@ -827,9 +868,10 @@ input:valid ~label{
    width: 200px;
    color: #999;
    font-size: 0.9rem;
+   font-family: 'montserrat', serif;
    font-weight: normal;
    border: none;
-   padding: 10px 1px 1px 5px;
+   padding: 10px 1px 1px 1px;
    border-bottom:1px solid #919191;
    position: relative;
    right: 15px;

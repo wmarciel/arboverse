@@ -368,6 +368,7 @@ background-color:#BCC5CF;
   display: none;
 }
 
+
 .show{
   display: block;
 }
@@ -442,7 +443,7 @@ background-color:#BCC5CF;
 .sub-fou-menu{
   margin-top: 3px;
   display: block;
-  width: 290px;
+  width: 300px;
   height: 500px;
   grid-area: 1 / 2 / 2 / 4;
   z-index: 12;
@@ -453,6 +454,43 @@ background-color:#BCC5CF;
   scroll-behavior: smooth;
   overflow-y: scroll;
 }
+.fa-info-circle:hover::before{
+  color:rgb(116, 115, 115);
+}
+.tooltip{
+  position: relative;
+}
+.tooltip .tooltext{
+  font-size: 0.75rem;
+  line-height: 1.5;
+  visibility: hidden;
+  width: 280px;
+  background-color: #BDD9F9;
+  color: var(--dark-text);
+  text-align: center;
+  padding: 8px 3px;
+  border-radius: 5px;
+  position: absolute;
+  bottom:110%;
+  left: 50%;
+  margin-left: -255px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.tooltip .tooltext::after{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 90%;
+  border-style: solid;
+  border-color: #BDD9F9 transparent transparent transparent;
+}
+.tooltip:hover .tooltext{
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /* ======== Sub-menu of CLIMATE FOREST COVER AND LAND* ==========*/
 .menu-btn{
@@ -466,7 +504,7 @@ padding: 10px 0;
 }
 .unit-btn h6,
 .unit-btn2 h6{
-width: 70%;
+width: 65%;
 text-align: left;
 font-weight: 400;
 font-size: 0.8rem;

@@ -457,6 +457,157 @@ background-color:#BCC5CF;
 .fa-info-circle:hover::before{
   color:rgb(116, 115, 115);
 }
+/* ======== MODAL BOX =========*/
+.wrapper a {
+  display: inline-block;
+  color: #585858;
+}
+/* The modal div features*/
+.modal {
+  visibility: hidden;
+  position: absolute;
+  top: 120vh;
+  width: 100%;
+  z-index: 20;
+  opacity: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(0, 0%, 23%, 0.7);
+  transition: all .4s;
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+/* Title of Modal box*/
+.modal-title{
+    padding: 30px 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+.modal-title h3{
+    color: #002147;
+    font-size: 1.5rem;
+}
+/*Sub-title of Modal Box*/
+.modal-title p{
+  color: gray;
+  font-size: 0.7rem;
+}
+/* Modal content features*/
+.modal__content {
+  border-radius: 4px;
+  position: relative;
+  width: 900px;
+  height: 80vh;
+  max-width: 90%;
+  background:white;
+  padding: 1em 2em;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+/*Characteristics of the information*/
+.arrow-table{
+  border-bottom: solid 1px hsla(0, 0%, 50%, 0.5);
+  display: flex;
+  flex-direction: arrow;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  padding: 20px 20px;
+  margin:0 ;
+}
+.arrow-table h6{
+    font-size: 0.9rem;
+    width: 20%;
+    color: #002147;
+}
+.p-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    width: 80%;
+    color:#494949;
+    line-height: 1.5;
+    text-align: justify;
+}
+.p-wrapper p{
+    padding-bottom: 8px;
+}
+.arrow-table a{
+    text-decoration: none;
+    color:#ff8700;
+}
+/* Overview and Citation*/
+.column-table{
+    display: flex;
+    flex-direction: column;
+}
+.column-table h6{
+  font-size: 0.9rem;
+  color: #002147;
+  text-align: center;
+  padding: 15px 0;
+}
+.p-wrapper-column{
+  font-size: 0.8rem;
+  font-weight: 400;
+  width: 90%;
+  margin: 0 auto;
+  color:#494949;
+  line-height: 1.5;
+  text-align: justify;
+  padding-bottom: 10px;
+  border-bottom: solid 1px hsla(0, 0%, 50%, 0.5);
+}
+.p-wrapper-column p{
+  padding-bottom: 8px;
+}
+.p-wrapper-column a{
+    text-decoration: none;
+    color: white;
+    background-color: #f9b16e;
+    padding: 5px;
+    border-radius: 5px;
+}
+.p-wrapper-column a:hover{
+    background-color: #FF8700;
+}
+/* Download Button*/
+.databtn{
+    text-align: center;
+    padding: 30px 0;
+}
+.download-data{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #f9b06c 0%, #f67e7e 100%);
+}
+.download-data a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 1px;
+}
+.download-data:hover{
+  background: linear-gradient(90deg, #FF8700 0%, #f1515e 100%);
+}
+/* Modal Box closer*/
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #585858;
+  text-decoration: none;
+  font-size: 3rem;
+  text-align: center;
+}
 /*tooltip of info icon*/
 .tooltip{
   position: relative;

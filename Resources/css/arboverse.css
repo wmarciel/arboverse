@@ -582,6 +582,12 @@ background-color:#BCC5CF;
 .p-wrapper-column a:hover{
     background-color: #FF8700;
 }
+.p-wrapper-column li{
+    padding: 5px 0;
+}
+.p-wrapper-column ul{
+  list-style:circle ;
+}
 /* Download Button*/
 .databtn{
     text-align: center;

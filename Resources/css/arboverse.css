@@ -358,16 +358,6 @@ background-color:#BCC5CF;
 
 /*Second Side Menu */
 
-/* Block Control*/
-#discovery-menu,
-#distribution-menu,
-#vector-menu,
-#climate-menu,
-#forestcover-menu,
-#land-cover-menu{
-  display: none;
-}
-
 
 .show{
   display: block;
@@ -379,13 +369,15 @@ background-color:#BCC5CF;
     text-align: center;
     margin-top: 3px;
     display: block;
-    width: 250px;
+    overflow-x: hidden;
+    width: 0px; /*width declared in the js*/
     grid-area: 1 / 2 / 2 / 4;
     z-index: 10;
     position: relative;
     background-color: var(--light-main);
-    padding: 10px;
     right: 50px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
 }
 .sub-menu h3{
     font-family: 'montserrat', serif;
@@ -394,7 +386,26 @@ background-color:#BCC5CF;
     padding: 20px 0;
     margin-bottom:10px;
     color: var(--blue);
-    margin-left:20px;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+.closebtn{
+  text-decoration: none;
+  color: var(--blue);
+}
+.closebtn:hover{
+  color:var(--orange);
+}
+.sub-menu .closebtn,
+.sub-second-menu .closebtn,
+.sub-th-menu .closebtn,
+.sub-fou-menu .closebtn{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 30px;
+  margin-left: 50px;
 }
 /* discovery, distribution*/
 .sub-1{
@@ -407,22 +418,24 @@ background-color:#BCC5CF;
 /*Sub menu features*/
 /* Climate*/
 .sub-second-menu{
+    width: 0;
     text-align: center;
+    overflow-x: hidden;
     margin-top: 3px;
     display: block;
-    width: 250px;
     height: 500px;
     grid-area: 1 / 2 / 2 / 4;
     z-index: 11;
     position: relative;
     background-color: var(--light-main);
-    padding: 10px;
     right: 50px;
+    transition: all 0.2s ease-in-out;
 }
 /* sub-menu head*/
 .sub-second-menu h3,
 .sub-th-menu h3,
 .sub-fou-menu h3{
+    margin-top: 15px;
     font-family: 'montserrat', serif;
     font-weight: 500;
     text-align: center;
@@ -441,18 +454,19 @@ background-color:#BCC5CF;
 /* FOREST COVER AND LAND COVER*/
 .sub-th-menu,
 .sub-fou-menu{
+  width: 0;
   margin-top: 3px;
   display: block;
-  width: 300px;
+  overflow-x: hidden;
   height: 500px;
   grid-area: 1 / 2 / 2 / 4;
   z-index: 12;
   position: relative;
   background-color: var(--light-main);
-  padding: 10px;
   right: 50px;
   scroll-behavior: smooth;
-  overflow-y: scroll;
+  overflow-y: scroll; 
+  transition: all 0.2s ease-in-out;
 }
 .fa-info-circle:hover::before{
   color:rgb(116, 115, 115);
@@ -695,7 +709,8 @@ background-color:#BCC5CF;
 
 /* ======== Sub-menu of CLIMATE FOREST COVER AND LAND* ==========*/
 .menu-btn{
-  padding: 0px 5px;
+  padding: 10px 10px;
+
 }
 /* ======= Sub-menu container features =======*/
 .unit-btn,
@@ -718,6 +733,7 @@ color:var(--dark-text);
   font-family: 'montserrat', serif;
   padding: 5px;
   color:var(--dark-text);
+  margin-left: 10px;
 }
 /* main division land cover */
 .sub-fou-menu h5{
@@ -747,17 +763,19 @@ color:var(--dark-text);
   margin: 2px 0;
 }
 
-.bar-mesur{          /* Bar Measurement Area */
+.bar-mesur{ 
+  width: 280px;
+  margin: 0 auto;         /* Bar Measurement Area */
   height: 5px;
   border-radius: 5px;
 }
 .marker{              /* legend of layers */
   width: 100%;
+  margin-left: 20px;
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
   align-items: center;
-  margin-left: 5px;
 }
 .point{        /*point itself*/
   width: 10px;
@@ -774,6 +792,8 @@ color:var(--dark-text);
   border: none;
 }
 .indice{
+  width: 280px;
+  margin: 3px auto;
   margin-top: 3px;
   display: flex;
   justify-content: space-between;
@@ -925,6 +945,7 @@ color:var(--dark-text);
 .info-input{
     position: relative;
     margin-bottom: 30px;
+    margin-left: 20px;
 }
 .sub-menu input{
     font-size: 0.9rem;
@@ -1015,6 +1036,7 @@ input:valid ~label{
 .box{
     position: relative;
     margin-bottom: 40px;
+    margin-left: 20px;
 }
 .box p{
     text-align: left;
@@ -1225,7 +1247,7 @@ input:valid ~label{
     font-size: 0.7rem;
     display: block;
     position: absolute;
-    transform: translate(90%, -70%);
+    transform: translate(140%, -70%);
   }
 
  /*=====================  Map features ============================*/ 

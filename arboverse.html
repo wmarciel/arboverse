@@ -69,43 +69,43 @@
         <div class="grid">
             <!-- Main Menu Bar Filter-->
             <div id="menulateral">
-                <div class="item-button" id="discovery">
+                <div class="item-button" id="discovery" onclick="openNav()">
                     <div class="button-wrapper">
                         <img src="Resources/images/icons aboverse/discovery-01.png">
                         <span>Discovery</span>
                     </div>
                 </div>
-                <div class="item-button" id="distribution">
+                <div class="item-button" id="distribution" onclick="openNavdist()">
                     <div class="button-wrapper">
                         <img src="Resources/images/icons aboverse/Distribution-01.png">
                         <span>Distribution</span>
                     </div>
                 </div>
-                <div class="item-button" id="vector">
+                <div class="item-button" id="vector" onclick="openNavVec()">
                     <div class="button-wrapper">
                         <img src="Resources/images/icons aboverse/vector-01.png">
                         <span>Vector</span>
                     </div>
                 </div>
-                <div class="item-button" id="climate">
+                <div class="item-button" id="climate" onclick="openNavCli()">
                     <div class="button-wrapper">
                         <img src="Resources/images/icons aboverse/Untitled-5-01.png">
                         <span>Climate</span>
                     </div>
                 </div>
-                <div class="item-button" id="forest">
+                <div class="item-button" id="forest" onclick="openNavFor()">
                     <div class="button-wrapper forest">
                         <img src="Resources/images/icons aboverse/forest cover-01.png">
                         <span>Forest Cover & Deforestation</span>
                     </div>
                 </div>
-                <div class="item-button" id="land">
+                <div class="item-button" id="land" onclick="openNavLan()">
                     <div class="button-wrapper">
                         <img src="Resources/images/icons aboverse/land cover-01.png">
                         <span>Land Use</span>
                     </div>
                 </div>
-                <div class="item-button" id="mobility">
+                <div class="item-button" id="mobility" onclick="openNavMob()">
                     <div class="button-wrapper">
                         <img src="Resources/images/icons aboverse/Humanmobility-01.png">
                         <span>Human Mobility</span>
@@ -115,6 +115,7 @@
             <!--lateral menu side close-->
             <!--Discovery Menu-->
             <div id="discovery-menu" class="sub-menu sub-1">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="title-sub">
                     <h3>Virus Discovery</h3><i class="fa fa-info-circle" style="color:gray"></i>
                 </div>
@@ -139,6 +140,7 @@
             </div>
             <!--Distribution Menu-->
             <div id="distribution-menu" class="sub-menu sub-1">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavdist()">&times;</a>
                 <div class="title-sub">
                     <h3>Virus Distribution</h3><i class="fa fa-info-circle" style="color:gray"></i>
                 </div>
@@ -163,6 +165,7 @@
             </div>
             <!--Vector Menu-->
             <div id="vector-menu" class="sub-menu sub-2">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavVec()">&times;</a>
                 <div class="title-sub">
                     <h3>Vector Distribution</h3><i class="fa fa-info-circle" style="color:gray"></i>
                 </div>
@@ -185,6 +188,7 @@
             </div>
             <!--Climate Menu-->
             <div id="climate-menu" class="sub-second-menu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavCli()">&times;</a>
                 <h3>Climate</h3>
                 <div class="menu-btn">
                     <!--Temperature-->
@@ -295,6 +299,7 @@
             </div>
             <!--FOREST COVER AND DEFORESTATION MENU-->
             <div id="forestcover-menu" class="sub-th-menu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavFor()">&times;</a>
                 <h3>Forest Cover & Desforestation</h3>
                 <div class="menu-btn">
                     <!--Desforestation Alerts-->
@@ -483,53 +488,54 @@
                         </div>
                         <!--close marker-->
                     </div>
+                    <!--Forest landscape integrity index-->
+                    <div class="unit-btn2">
+                        <div class="unit-toggle">
+                            <div class="toggle">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <!--toggle close-->
+                            <h6>Forest Landscape integrity index</h6>
+                            <div class="wrapper tooltip">
+                                <a href="#demo-modal9"><i class="fa fa-info-circle"
+                                        style="color:gray; opacity: 0.8;"></i></a>
+                                <span class="tooltext">Displays forest condiction as a continuous index determined by
+                                    degree
+                                    of anthropogenic modification</span>
+                            </div>
+                        </div>
+                        <!--Unit toggle close-->
+                        <div class="measure">
+                            <div class="bar-mesur browngreen-s"></div>
+                            <div class="indice">
+                                <label class="index">0</label>
+                                <label class="index">1</label>
+                                <label class="index">2</label>
+                                <label class="index">3</label>
+                                <label class="index">4</label>
+                                <label class="index">5</label>
+                                <label class="index">6</label>
+                                <label class="index">7</label>
+                                <label class="index">8</label>
+                                <label class="index">9</label>
+                                <label class="index">10</label>
+                            </div>
+                            <div class="indice">
+                                <label class="index">Low integrity</label>
+                                <label class="index">High integrity</label>
+                            </div>
+                        </div>
+                    </div>
                     <!--unit close-->
                 </div>
-                <!--menu btn close-->
-                <!--Forest landscape integrity index-->
-                <div class="unit-btn2">
-                    <div class="unit-toggle">
-                        <div class="toggle">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                        <!--toggle close-->
-                        <h6>Forest Landscape integrity index</h6>
-                        <div class="wrapper tooltip">
-                            <a href="#demo-modal9"><i class="fa fa-info-circle"
-                                    style="color:gray; opacity: 0.8;"></i></a>
-                            <span class="tooltext">Displays forest condiction as a continuous index determined by degree
-                                of anthropogenic modification</span>
-                        </div>
-                    </div>
-                    <!--Unit toggle close-->
-                    <div class="measure">
-                        <div class="bar-mesur browngreen-s"></div>
-                        <div class="indice">
-                            <label class="index">0</label>
-                            <label class="index">1</label>
-                            <label class="index">2</label>
-                            <label class="index">3</label>
-                            <label class="index">4</label>
-                            <label class="index">5</label>
-                            <label class="index">6</label>
-                            <label class="index">7</label>
-                            <label class="index">8</label>
-                            <label class="index">9</label>
-                            <label class="index">10</label>
-                        </div>
-                        <div class="indice">
-                            <label class="index">Low integrity</label>
-                            <label class="index">High integrity</label>
-                        </div>
-                    </div>
-                </div>
-                <!--unit close-->
+
             </div>
             <!--Land COVER MENU-->
             <div id="land-cover-menu" class="sub-fou-menu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavLan()">&times;</a>
                 <h3>Land Use</h3>
                 <div clas="menu-btn">
                     <h5>Commodities</h5>

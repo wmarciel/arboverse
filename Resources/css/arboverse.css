@@ -633,9 +633,42 @@ background-color:#BCC5CF;
   text-align: center;
 }
 /*tooltip of info icon*/
+/* Discovery, distribution and vector*/
 .tooltip{
   position: relative;
 }
+.tooltip .tooltext-a{
+  font-size: 0.75rem;
+  line-height: 1.5;
+  visibility: hidden;
+  width: 200px;
+  background-color: #BDD9F9;
+  color: var(--dark-text);
+  text-align: center;
+  padding: 8px 3px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 15;
+  top:110%;
+  left: 50%;
+  margin-left: -190px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.tooltip .tooltext-a::after{
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 93%;
+  border-style: solid;
+  border-color:  transparent transparent #BDD9F9 transparent;
+}
+.tooltip:hover .tooltext-a{
+  visibility: visible;
+  opacity: 1;
+}
+/* Climate, forest and land use*/
 .tooltip .tooltext{
   font-size: 0.75rem;
   line-height: 1.5;

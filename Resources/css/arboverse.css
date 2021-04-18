@@ -56,6 +56,10 @@ nav{
   align-items: center;
   background: linear-gradient(180deg, hsla(209, 100%, 13%,0.8),hsla(209, 100%, 13%,0.5),transparent);
   height: 11vh;
+  position: static;
+  z-index: 1;
+  top:0;
+  left: 0;
   font-family: 'Montserrat', sans-serif;
 }
 .hl{
@@ -224,9 +228,7 @@ nav img{
         width:7%;
         height: 7%;
     }
-    .hl{
-        padding-bottom: 10px;
-    }
+    
     .burger div{
         width: 25px;
         height:3px;
@@ -258,7 +260,7 @@ nav img{
         background-position: bottom;
     }
     .hl{
-        top: 12vh;
+        top: 1.5vh;
     }
     .bannermenu h1{
         font-size: 2.7rem;
@@ -943,7 +945,7 @@ color:var(--dark-text);
   justify-content: center;
 }
 
-.toggle{
+.togglebtn{
   display: flex;
   height: 40px;
   align-items: center;
@@ -1287,15 +1289,15 @@ input:valid ~label{
     transition: .4s;
   }
   
- .toggle input:checked + .slider {           /*  button color */
+ .togglebtn input:checked + .slider {           /*  button color */
     background-color:var(--orange);
   }
   
-  .toggle input:focus + .slider {            /*  button color */
+  .togglebtn input:focus + .slider {            /*  button color */
     box-shadow: 0 0 1px var(--orange);
   }
   
-  .toggle input:checked + .slider:before {     /*  button translade size */
+  .togglebtn input:checked + .slider:before {     /*  button translade size */
     -webkit-transform: translateX(18px);
     -ms-transform: translateX(18px);
     transform: translateX(18px);

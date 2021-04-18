@@ -286,7 +286,7 @@ nav img{
         font-size: 0.9rem;
     }
     .hl{
-        top: 8vh;
+        top: 1.5vh;
     }
     
 }
@@ -302,7 +302,7 @@ nav img{
 .vector-catalogue{
   padding: 30px 10px;
   text-align: center;
-  width:600px;
+  width:45%;
   margin: 20px;
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -455,11 +455,33 @@ nav img{
   font-weight: 600;
 }
 .tab-content-unit output{
-  width: 50%;
+  width: 60%;
   text-align: left;
   color:var(--dark-text);
   font-size: 0.9rem;
 }
+
+@media screen and (max-width:900px){
+  .row-wrapper{
+    flex-direction: column;
+  }
+  .arbovirus-catalogue,
+  .vector-catalogue{
+    margin: 10px auto;
+    width: 85%;
+  }
+  .tab-content-unit{
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width:450px){
+  .arbovirus-catalogue,
+  .vector-catalogue{
+    width: 90%;
+  }
+
+} 
 /* =======GRID=====*/
 .grid{
   height: 95vh;

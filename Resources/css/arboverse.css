@@ -422,6 +422,28 @@ nav img{
   transition: all 0.3s;
   color:var(--orange);
 }
+
+.tab .tab-label-vec{
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-bottom: solid 1px hsla(212, 100%, 14%,0.2);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'montserrat', serif;
+  color:var(--dark-text);
+}
+.tab-label-vec:hover{
+  background: hsla(212, 100%, 14%,0.2);
+}
+.tab-label-vec::after{
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.3s;
+  color: var(--blue);
+}
 .tab-content{
   max-height: 0;
   padding: 0 1em;
@@ -432,7 +454,12 @@ nav img{
 .tab input:checked + .tab-label{
   background: hsla(32, 100%, 50%, 0.3);
 }
-.tab input:checked + .tab-label::after{
+.tab input:checked + .tab-label-vec{
+  background: hsla(212, 100%, 14%,0.3);
+}
+.tab input:checked + .tab-label::after,
+.tab input:checked + .tab-label-vec::after
+{
   transform: rotate(90deg);
   color: var(--dark-text);
 }
@@ -444,7 +471,7 @@ nav img{
   padding: 10px 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-bottom: solid 1px hsla(0, 0%, 50%, 0.3);
 }
@@ -455,10 +482,18 @@ nav img{
   font-weight: 600;
 }
 .tab-content-unit output{
-  width: 60%;
+  margin-left: 10px;
+  width: 55%;
   text-align: left;
   color:var(--dark-text);
   font-size: 0.9rem;
+}
+.tab-content-unit img{
+  width: 200px;
+  height: 150px;
+}
+figcaption{
+  font-size: 0.7rem;
 }
 
 @media screen and (max-width:900px){

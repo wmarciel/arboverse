@@ -68,7 +68,7 @@
                                         <output id="virus_name">Dengue 1</output>
                                     </div>
                                     <div class="tab-content-unit">
-                                        <h5>Taxonomi:</h5>
+                                        <h5>Taxonomy:</h5>
                                         <output id="virus_taxonomi">Dengue1, Flavivirus, Flaviviridae</output>
                                     </div>
                                     <div class="tab-content-unit">
@@ -78,6 +78,14 @@
                                     <div class="tab-content-unit">
                                         <h5>First Isolate:</h5>
                                         <output id="virus_firstIso">02/20/1944</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Reference Strain:</h5>
+                                        <output id="virus_strain">XXXXXXX</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Genome Size:</h5>
+                                        <output id="virus_size">10,735 nt</output>
                                     </div>
                                     <div class="tab-content-unit">
                                         <h5>Genome:</h5>
@@ -93,14 +101,6 @@
                                 <input type="checkbox" id="chck2">
                                 <label class="tab-label" for="chck2">Transmission</label>
                                 <div class="tab-content">
-                                    <div class="tab-content-unit">
-                                        <h5>Reference Strain:</h5>
-                                        <output id="virus_strain">XXXXXXX</output>
-                                    </div>
-                                    <div class="tab-content-unit">
-                                        <h5>Genome Size:</h5>
-                                        <output id="virus_size">10,735 nt</output>
-                                    </div>
                                     <div class="tab-content-unit">
                                         <h5>Vector Type:</h5>
                                         <output id="virus_vector">Aedes aegypti, Aedes albopictus</output>
@@ -195,11 +195,123 @@
                         <div class="tabs">
                             <div class="tab">
                                 <input type="checkbox" id="chcka">
-                                <label class="tab-label" for="chcka">Taxonomy & Genomics</label>
+                                <label class="tab-label-vec" for="chcka">Taxonomy</label>
                                 <div class="tab-content">
                                     <div class="tab-content-unit">
-                                        <h5>Vector name:</h5>
-                                        <output id="vector_name"></output>
+                                        <h5>Arthropods Name:</h5>
+                                        <output id="vector_name">Mosquito</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Binominal Name:</h5>
+                                        <output id="vector_binominal">Aedes aegypti</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Taxonimy:</h5>
+                                        <output id="vector_taxonomy">Aedes aegypti, Diptera, Culicidae, Culicinae</output>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chckb">
+                                <label class="tab-label-vec" for="chckb">Genomics</label>
+                                <div class="tab-content">
+                                    <div class="tab-content-unit">
+                                        <h5>Genome:</h5>
+                                        <output id="vector_genome">Complete</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Reference Genome:</h5>
+                                        <output id="vector_reference">XXX</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Genome Size:</h5>
+                                        <output id="vector_gensize">~1.25Gb</output>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chckc">
+                                <label class="tab-label-vec" for="chckc">Habitat</label>
+                                <div class="tab-content">
+                                    <div class="tab-content-unit">
+                                        <h5>Habitat:</h5>
+                                        <output id="vector_habitat">Urban</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Natural Landscape:</h5>
+                                        <output id="vector_land">Fresh water</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Survival  Temperature Ranges:</h5>
+                                        <output id="vector_temp"> 21 - 29 </output>
+                                    </div>   
+                                    <div class="tab-content-unit">
+                                        <h5>Survival  Humidity %:</h5>
+                                        <output id="vector_hum"> 70 </output>
+                                    </div>  
+                                    <div class="tab-content-unit">
+                                        <h5>Geographic-distribution:</h5>
+                                        <output id="vector_geo">Globally </output>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chckd">
+                                <label class="tab-label-vec" for="chckd">Behavior</label>
+                                <div class="tab-content">
+                                    <div class="tab-content-unit">
+                                        <h5>Bllod Meal:</h5>
+                                        <output id="vector_meal">Humans</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Feeding Periods:</h5>
+                                        <output id="vector_feed">Daily</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Adult Life:</h5>
+                                        <output id="vector_adult">10 days</output>
+                                    </div>   
+                                    <div class="tab-content-unit">
+                                        <h5>Anthropophilic Behavior:</h5>
+                                        <output id="vector_anthro">Yes</output>
+                                    </div>  
+                                    <div class="tab-content-unit">
+                                        <h5>Eggs Viability:</h5>
+                                        <output id="vector_eggs">360 days</output>
+                                    </div> 
+                                    <div class="tab-content-unit">
+                                        <h5>Lifecycle time:</h5>
+                                        <output id="vector_life">6 days</output>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chcke">
+                                <label class="tab-label-vec" for="chcke">Viruses</label>
+                                <div class="tab-content">
+                                    <div class="tab-content-unit">
+                                        <h5>Main Vector:</h5>
+                                        <output id="vector_main">Dengue, Zika, Chikungunya, Yellow Fever</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Secondary Vector:</h5>
+                                        <output id="vector_second">West Nile</output>
+                                    </div>
+                                    <div class="tab-content-unit">
+                                        <h5>Experimental Infection:</h5>
+                                        <output id="vector_exp">Mayaro</output>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chckf">
+                                <label class="tab-label-vec" for="chckf">Picture</label>
+                                <div class="tab-content">
+                                    <div class="tab-content-unit">
+                                    <figure>
+                                        <img src="/Resources/images/Research/Arboverse/aedes.jpeg"/>
+                                        <figcaption>Aedes aegpty | Image from Google</figcaption>
+                                    </figure> 
                                     </div>
                                 </div>
                             </div>

@@ -37,7 +37,7 @@ body{
     font-size: 3rem;
     letter-spacing: 4px;
     text-align: center;
-    padding-top: 35vh;
+    padding-top: 25vh;
     color:white;
 }
 .bannermenu h3{
@@ -57,17 +57,13 @@ nav{
   background: linear-gradient(180deg, hsla(209, 100%, 13%,0.8),hsla(209, 100%, 13%,0.5),transparent);
   height: 11vh;
   font-family: 'Montserrat', sans-serif;
-  position:fixed;
-  z-index: 1;
-  top:0;
-  left: 0;
 }
 .hl{
-    width:90%;
+    width:95%;
     margin:0 auto;
     border-bottom: solid 1px hsl(0, 0%, 100%, 1);
     position: relative;
-    top:11vh;
+    top:2vh;
 }
 nav img{
   width: 10%;
@@ -293,12 +289,175 @@ nav img{
     
 }
 /* Catalogue*/
+
+/* ================CATALOGUE=========*/
 .catalogue{
-  margin-top: 10vh;
-  height: 30vh;
+  margin: 5vh 0;
+  height: 100%;
   text-align: center;
 }
-
+.arbovirus-catalogue,
+.vector-catalogue{
+  padding: 30px 10px;
+  text-align: center;
+  width:600px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.arbovirus-content h2,
+.vector-catalogue h2{
+  font-family: 'montserrat', serif;
+  color: var(--blue);
+}
+.sec-title{
+  color:var(--orange);
+}
+/* Search catalogue area*/
+.search{
+  width:100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 30px 20px;
+}
+.search-virus{
+  width: 70%;
+  border: solid 1px #FF8700;
+  border-right: none;
+  padding: 5px;
+  height: 30px;
+  border-radius:  5px 0 0 5px;
+  outline: none;
+  font-family: 'Montserrat', serif;
+  color:var(--dark-text);
+}
+.search-virus:focus{
+  color:#FF8700;
+}
+.searchbutton{
+  width: 40px;
+  height: 30px;
+  border: solid 1px #FF8700;
+  background: #FF8700;
+  text-align: center;
+  color: #fff;
+  border-radius:  0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.searchbutton:hover,
+.searchbutton:active{
+  background: #e27902;
+}
+.search-vector{
+  width: 70%;
+  border: solid 1px #002147;
+  border-right: none;
+  padding: 5px;
+  height: 30px;
+  border-radius:  5px 0 0 5px;
+  outline: none;
+  font-family: 'Montserrat', serif;
+  color:var(--dark-text);
+}
+.search-vector:focus{
+  color:var(--blue);
+}
+.searchbutton-vector{
+  width: 40px;
+  height: 30px;
+  border: solid 1px #002147;
+  background: #210047;
+  text-align: center;
+  color: #fff;
+  border-radius:  0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.searchbutton-vector:hover,
+.searchbutton-vector:active{
+  background: #003775;
+}
+/*Accordion*/
+.row-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.tab input{
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tabs{
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,0,0.5);
+}
+.tab{
+  width: 100%;
+  overflow: hidden;  
+}
+.tab .tab-label{
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-bottom: solid 1px hsla(32, 100%, 50%,0.2);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'montserrat', serif;
+  color:var(--dark-text);
+}
+.tab-label:hover{
+  background: hsla(32, 100%, 50%, 0.2);
+}
+.tab-label::after{
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.3s;
+  color:var(--orange);
+}
+.tab-content{
+  max-height: 0;
+  padding: 0 1em;
+  color: #002147;
+  background: white;
+  transition: all 0.3s;
+}
+.tab input:checked + .tab-label{
+  background: hsla(32, 100%, 50%, 0.3);
+}
+.tab input:checked + .tab-label::after{
+  transform: rotate(90deg);
+  color: var(--dark-text);
+}
+.tab input:checked ~ .tab-content{
+  max-height: 100vh;
+  padding: 1em;
+}
+.tab-content-unit{
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px hsla(0, 0%, 50%, 0.3);
+}
+.tab-content-unit h5{
+  width: 40%;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.tab-content-unit output{
+  width: 50%;
+  text-align: left;
+  color:var(--dark-text);
+  font-size: 0.9rem;
+}
 /* =======GRID=====*/
 .grid{
   height: 100vh;
@@ -1286,11 +1445,10 @@ input:valid ~label{
  /*=====================  Map features ============================*/ 
 
 #map{
-    width: 99%;
-    position: absolute;
-    top: 120vh;
+    width: 98%;
+    position: relative;
     left: 0;
-    height: 95vh;
+    height: 90vh;
     grid-area: 1 / 1 / 6 / 11;
     z-index: 0;
 }

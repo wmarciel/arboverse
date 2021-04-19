@@ -468,7 +468,7 @@ nav img{
   padding: 1em;
 }
 .tab-content-unit{
-  padding: 10px 20px;
+  padding: 10px 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -476,7 +476,8 @@ nav img{
   border-bottom: solid 1px hsla(0, 0%, 50%, 0.3);
 }
 .tab-content-unit h5{
-  width: 40%;
+  width: 35%;
+  margin-left: 15px;
   text-align: left;
   font-size: 0.9rem;
   font-weight: 600;
@@ -841,10 +842,43 @@ background-color:#BCC5CF;
   text-align: center;
 }
 /*tooltip of info icon*/
-/* Discovery, distribution and vector*/
+
 .tooltip{
   position: relative;
 }
+/*Catalogue*/
+.tooltip .tooltext-1{
+  font-size: 0.75rem;
+  line-height: 1.5;
+  visibility: hidden;
+  width: 200px;
+  background-color: #BDD9F9;
+  color: var(--dark-text);
+  text-align: center;
+  padding: 8px 3px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 15;
+  top: -5px;
+  left: 110%; 
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.tooltip .tooltext-1::after{
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-style: solid;
+  border-color:   transparent  #BDD9F9 transparent transparent ;
+}
+.tooltip:hover .tooltext-1{
+  visibility: visible;
+  opacity: 1;
+}
+/* Discovery, distribution and vector*/
 .tooltip .tooltext-a{
   font-size: 0.75rem;
   line-height: 1.5;

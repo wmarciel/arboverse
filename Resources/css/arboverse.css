@@ -315,7 +315,7 @@ nav img{
 .sec-title{
   color:var(--orange);
 }
-/* Search catalogue area*/
+/*====Search catalogue area======*/
 .search{
   width:100%;
   position: relative;
@@ -381,7 +381,7 @@ nav img{
 .searchbutton-vector:active{
   background: #003775;
 }
-/*Accordion*/
+/*====== Accordion Catalogue  Arbovirus / vector========*/
 .row-wrapper{
   display: flex;
   flex-direction: row;
@@ -422,7 +422,6 @@ nav img{
   transition: all 0.3s;
   color:var(--orange);
 }
-
 .tab .tab-label-vec{
   display: flex;
   justify-content: space-between;
@@ -503,7 +502,7 @@ nav img{
     padding: 10px 10px;
   }
 }
-
+/* Mobile Catalogue*/
 @media screen and (max-width:450px){
   .arbovirus-catalogue,
   .vector-catalogue{
@@ -531,7 +530,6 @@ nav img{
   margin-left: 0px;
   margin-top: 0px;
 }
-
 /*Main button side menu*/
 .item-button{
   padding: 10px;
@@ -592,6 +590,7 @@ background-color:#BCC5CF;
     display: none;
   }
 }
+/* Mobile landscape side menu*/
 @media screen and (min-width:600px) and (max-width: 750px) and (orientation: landscape){
   .button-wrapper img{
     width: 30px;
@@ -605,11 +604,7 @@ background-color:#BCC5CF;
     display: none;
   }
 }
-/*Second Side Menu */
-.show{
-  display: block;
-}
-
+/*====== Second Side Menu =======*/
 /*Sub menu features*/
 /* discovery, distribution and Vector*/
 .title-sub{
@@ -642,7 +637,6 @@ background-color:#BCC5CF;
     margin-top: 15px;
     margin-left: 30px;
 }
-
 .closebtn{
   text-decoration: none;
   color: var(--blue);
@@ -722,6 +716,7 @@ background-color:#BCC5CF;
 .fa-info-circle:hover::before{
   color:rgb(116, 115, 115);
 }
+/* Adjust submenu, screen < 1200px*/
 @media screen and (max-width:1200px){
     .sub-menu,
     .sub-second-menu,
@@ -752,7 +747,7 @@ background-color:#BCC5CF;
     height: 300px;
   }
 }
-
+/* Lanscape submenu*/
 @media screen and (min-width:600px) and (max-width: 750px) and (orientation: landscape){
   .sub-menu{
     right: 0px;
@@ -767,8 +762,6 @@ background-color:#BCC5CF;
     height: 230px;
   }
 }
-
-
 /* ======== MODAL BOX =========*/
 .wrapper a {
   display: inline-block;
@@ -793,7 +786,6 @@ background-color:#BCC5CF;
   background-color: hsla(0, 0%, 23%, 0.7);
   transition: all .4s;
 }
-
 .modal:target {
   visibility: visible;
   opacity: 1;
@@ -930,7 +922,6 @@ background-color:#BCC5CF;
   font-size: 3rem;
   text-align: center;
 }
-
 /* Modal MOBILE SIZE*/
 @media screen and (max-width:450px){
   .modal__content{
@@ -950,13 +941,11 @@ background-color:#BCC5CF;
     width: 95%;
   }
 }
-
-/*tooltip of info icon*/
-
+/*====== Tooltip of info icon=======*/
 .tooltip{
   position: relative;
 }
-/*Catalogue*/
+/* Tooltip  for Catalogue*/
 .tooltip .tooltext-1{
   font-size: 0.75rem;
   line-height: 1.5;
@@ -988,7 +977,7 @@ background-color:#BCC5CF;
   visibility: visible;
   opacity: 1;
 }
-/* Discovery, distribution and vector*/
+/*  Tooltip  for Discovery, distribution and vector*/
 .tooltip .tooltext-a{
   font-size: 0.75rem;
   line-height: 1.5;
@@ -1020,7 +1009,7 @@ background-color:#BCC5CF;
   visibility: visible;
   opacity: 1;
 }
-/* Climate, forest and land use*/
+/*  Tooltip  for Climate, forest and land use*/
 .tooltip .tooltext{
   font-size: 0.75rem;
   line-height: 1.5;
@@ -1091,11 +1080,9 @@ background-color:#BCC5CF;
   color: var(--dark-text);
   
 }
-
 /* ======== Sub-menu of CLIMATE FOREST COVER AND LAND* ==========*/
 .menu-btn{
   padding: 10px 10px;
-
 }
 /* ======= Sub-menu container features =======*/
 .unit-btn,
@@ -1138,7 +1125,6 @@ color:var(--dark-text);
   align-items: center;
   justify-content: center;
 }
-
 .togglebtn{
   display: flex;
   height: 40px;
@@ -1147,7 +1133,6 @@ color:var(--dark-text);
   padding: 5px;
   margin: 2px 0;
 }
-
 .bar-mesur{ 
   width: 280px;
   margin: 0 auto;         /* Bar Measurement Area */
@@ -1183,7 +1168,6 @@ color:var(--dark-text);
   display: flex;
   justify-content: space-between;
 }
-
 /* Bar Mesurement color features GRADIENT */
 .bluetopink{
   background: linear-gradient( to right, #0091AD, #1085A4, #247699, #316C92, #4A5A85, #5C4D7C, #6E3F72, #7D346A, #8C2962, #9F1B58, #B7094C);
@@ -1317,7 +1301,6 @@ color:var(--dark-text);
 .unknown-p{
   background-color: #822faf;
 }
-
 /* ======= Sub-menu container Timeline Features  =======*/
 .menu-timeslider{
   margin: 30px 0;
@@ -1329,7 +1312,6 @@ color:var(--dark-text);
 .range-player{
   display: flex;
 }
-
 /* =======      Search input in Discovery, Distribution and Vector   =========*/
 .info-input{
     position: relative;
@@ -1344,8 +1326,9 @@ color:var(--dark-text);
     border: none;
     border-bottom:1px solid #919191;
 }
-.sub-menu input:focus {outline: none;}
-
+.sub-menu input:focus {
+    outline: none;
+  }
 .info-input  label{
     color: #999;
     font-size: 0.9rem;
@@ -1390,7 +1373,6 @@ input:valid ~label{
 .sub-menu input:focus ~ .bar:before, input:focus ~ .bar:after {
     width:50%;
   }
-  
   /*=========== HIGHLIGHTER =========== */
   .highlight {
     position:absolute;
@@ -1494,27 +1476,22 @@ input:valid ~label{
   .togglebtn input:focus + .slider {            /*  button color */
     box-shadow: 0 0 1px var(--orange);
   }
-  
   .togglebtn input:checked + .slider:before {     /*  button translade size */
     -webkit-transform: translateX(18px);
     -ms-transform: translateX(18px);
     transform: translateX(18px);
   }
-
   .slider.round {                     /*  button format*/
     border-radius: 34px;
   }
-  
   .slider.round:before {     /*  button slider format*/
     border-radius: 50%;
   }
-
  /* ====== RANGE SLIDER BUTTON ========== */
 .slidecontainer {
     width: 100%;                 /* Width of the outside container */
     margin: 4px auto;
-  }  
-        
+  }       
   .slidemonth,
    .slideyear {                        /* The slider itself */
     height: 5px;
@@ -1530,13 +1507,11 @@ input:valid ~label{
     border:0;
     padding:0;
   }
-  
   .slidemonth:hover,               /* Mouse-over effects */
   .slideyear:hover
    {
     opacity: 1; 
   }
-  
   /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
   /* MONTH SLIDER features*/
   .slidemonth::-webkit-slider-thumb {
@@ -1548,7 +1523,6 @@ input:valid ~label{
     border-radius: 50%; 
     cursor: pointer; 
   }
-  
   .slidemonth::-moz-range-thumb {
     width: 15px; 
     height: 15px; 
@@ -1566,7 +1540,6 @@ input:valid ~label{
     border-radius: 50%; 
     cursor: pointer; 
   }
-  
   .slideyear::-moz-range-thumb {
     width: 15px; 
     height: 15px;

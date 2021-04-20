@@ -531,13 +531,7 @@ nav img{
   margin-left: 0px;
   margin-top: 0px;
 }
-.title-sub{
-  padding: 0 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
+
 /*Main button side menu*/
 .item-button{
   padding: 10px;
@@ -558,6 +552,9 @@ background-color:#BCC5CF;
   flex-direction: column;
 }
 /*Main button Image side menu*/
+.grid{
+  height: 100vh;
+}
 .button-wrapper img{
   width: 50%;
   height: 50%;
@@ -567,16 +564,61 @@ background-color:#BCC5CF;
   font-size: 0.6rem;
   color: var(--dark-text);
 }
-
+/* MOBILE main menu map*/
+@media screen and (max-width:600px){
+  #menulateral{
+    flex-direction:row;
+    height: 45px;
+    width:100%;
+    grid-area: 10 / 5 / 11 / 6;
+    flex-wrap: nowrap;
+    position: relative;
+    bottom: 3vh;
+    margin-left: 1px;
+  }
+  .item-button{
+    margin: 2px;
+    padding: 6px;
+    border-radius: 3px;
+    border-bottom: none;
+    border: solid 1px hsla(0, 0%, 50%, 0.2);
+  }
+  .button-wrapper img{
+    width: 30px;
+    height: 30px;
+  }
+  .button-wrapper span{
+    margin-top: 0px;
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 750px) and (orientation: landscape){
+  .button-wrapper img{
+    width: 30px;
+    height: 30px;
+  }
+  .item-button{
+    padding: 4px;
+  }
+  .button-wrapper span{
+    margin-top: 0px;
+    display: none;
+  }
+}
 /*Second Side Menu */
-
-
 .show{
   display: block;
 }
 
 /*Sub menu features*/
 /* discovery, distribution and Vector*/
+.title-sub{
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .sub-menu{
     text-align: center;
     display: block;
@@ -680,6 +722,53 @@ background-color:#BCC5CF;
 .fa-info-circle:hover::before{
   color:rgb(116, 115, 115);
 }
+@media screen and (max-width:1200px){
+    .sub-menu,
+    .sub-second-menu,
+    .sub-th-menu,
+    .sub-fou-menu{
+      right:0px;
+    }
+}
+/*MOBILE SUB_MENU*/
+@media screen and (max-width:600px){
+  .sub-menu{
+    width: 0px; /*width declared in the js*/
+    grid-area: 1 / 1 / 5 / 4;
+    right: 0px;
+    top: 40vh;
+  }
+  .sub-second-menu{
+    grid-area: 1 / 1 / 5 / 4;
+    right: 0px;
+    top: 30vh;
+    height: 300px;
+  }
+  .sub-th-menu,
+  .sub-fou-menu{
+    grid-area: 1 / 1 / 2 / 4;
+    right: 0px;
+    top: 30vh;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width: 750px) and (orientation: landscape){
+  .sub-menu{
+    right: 0px;
+  }
+  .sub-second-menu{
+    right: 0px;
+    height: 230px;
+  }
+  .sub-th-menu,
+  .sub-fou-menu{
+    right: 0px;
+    height: 230px;
+  }
+}
+
+
 /* ======== MODAL BOX =========*/
 .wrapper a {
   display: inline-block;

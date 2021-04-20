@@ -17,6 +17,7 @@ function openNav(){
     document.getElementById('climate-menu').style.width = "0";
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
+    
 }
 function closeNav(){
     document.getElementById("discovery-menu").style.width = "0";

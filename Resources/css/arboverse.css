@@ -829,7 +829,7 @@ background-color:#BCC5CF;
 .arrow-table{
   border-bottom: solid 1px hsla(0, 0%, 50%, 0.5);
   display: flex;
-  flex-direction: arrow;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   align-content: flex-start;
@@ -930,6 +930,27 @@ background-color:#BCC5CF;
   font-size: 3rem;
   text-align: center;
 }
+
+/* Modal MOBILE SIZE*/
+@media screen and (max-width:450px){
+  .modal__content{
+    padding: 1em 1em;
+  }
+  .arrow-table{
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .arrow-table h6{
+    width:100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .p-wrapper{
+    margin-left: 0;
+    width: 95%;
+  }
+}
+
 /*tooltip of info icon*/
 
 .tooltip{

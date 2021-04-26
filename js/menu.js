@@ -17,6 +17,7 @@ function openNav(){
     document.getElementById('climate-menu').style.width = "0";
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
+    document.getElementById('mobility-menu').style.width = "0";
     
 }
 function closeNav(){
@@ -32,6 +33,7 @@ function openNavdist(){
     document.getElementById('climate-menu').style.width = "0";
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
+    document.getElementById('mobility-menu').style.width = "0";
 
 }
 function closeNavdist(){
@@ -47,6 +49,7 @@ function openNavVec (){
     document.getElementById('climate-menu').style.width = "0";
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
+    document.getElementById('mobility-menu').style.width = "0";
 
 }
 function closeNavVec (){
@@ -61,6 +64,7 @@ function openNavCli (){
     document.getElementById('vector-menu').style.width = "0";
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
+    document.getElementById('mobility-menu').style.width = "0";
 
 }
 function closeNavCli (){
@@ -76,6 +80,7 @@ function openNavFor (){
     document.getElementById('vector-menu').style.width = "0";
     document.getElementById('climate-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
+    document.getElementById('mobility-menu').style.width = "0";
 
 }
 function closeNavFor (){
@@ -91,10 +96,27 @@ function openNavLan (){
     document.getElementById('vector-menu').style.width = "0";
     document.getElementById('climate-menu').style.width = "0";
     document.getElementById('forestcover-menu').style.width = "0";
+    document.getElementById('mobility-menu').style.width = "0";
 
 }
 function closeNavLan (){
     document.getElementById('land-cover-menu').style.width = "0";
+}
+
+// Open and Close submenu Land cover
+function openNavMob (){
+    document.getElementById('mobility-menu').style.width = "320px";
+    document.getElementById('mobility-menu').style.opacity = "1";
+    document.getElementById("discovery-menu").style.width = "0";
+    document.getElementById("distribution-menu").style.width = "0";
+    document.getElementById('vector-menu').style.width = "0";
+    document.getElementById('climate-menu').style.width = "0";
+    document.getElementById('forestcover-menu').style.width = "0";
+    document.getElementById('land-cover-menu').style.width = "0";
+
+}
+function closeNavMob (){
+    document.getElementById('mobility-menu').style.width = "0";
 }
 
 

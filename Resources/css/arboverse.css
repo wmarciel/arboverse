@@ -1296,22 +1296,22 @@ color:var(--dark-text);
   background: linear-gradient( to right, #0091AD, #1085A4, #247699, #316C92, #4A5A85, #5C4D7C, #6E3F72, #7D346A, #8C2962, #9F1B58, #B7094C);
 }
 .lightyellowgreen{
-  background: linear-gradient(90deg, hsla(92, 62%, 72%, 1) 0%, hsla(98, 56%, 71%, 1) 10%, hsla(105, 51%, 71%, 1) 20%, hsla(112, 46%, 70%, 1) 30%, hsla(123, 42%, 69%, 1) 40%, hsla(132, 42%, 66%, 1) 50%, hsla(139, 42%, 64%, 1) 60%, hsla(145, 41%, 61%, 1) 70%, hsla(152, 41%, 58%, 1) 80%, hsla(157, 41%, 55%, 1) 90%, hsla(163, 41%, 52%, 1) 100%, hsla(151, 42%, 58%, 1) 100%, hsla(157, 41%, 55%, 1) 100%);
+  background: linear-gradient(90deg, #b5e48b 0%, hsla(98, 56%, 71%, 1) 10%, hsla(105, 51%, 71%, 1) 20%, hsla(112, 46%, 70%, 1) 30%, hsla(123, 42%, 69%, 1) 40%, hsla(132, 42%, 66%, 1) 50%, hsla(139, 42%, 64%, 1) 60%, hsla(145, 41%, 61%, 1) 70%, hsla(152, 41%, 58%, 1) 80%, hsla(157, 41%, 55%, 1) 90%, hsla(163, 41%, 52%, 1) 100%, hsla(151, 42%, 58%, 1) 100%, #5dbb97 100%);
 }
 .purple{
   background: linear-gradient( to right, #F5E4FE, #F1D7FD, #ECC9FC, #E7BCFB, #E2AEFB, #DDA1FA, #D893F9, #D486F8, #CF78F8, #CA6BF7, #C55DF6);
 }
 .green-s{
-  background: linear-gradient(90deg, hsla(85, 53%, 63%, 1) 0%, hsla(86, 44%, 58%, 1) 10%, hsla(88, 39%, 55%, 1) 20%, hsla(89, 34%, 52%, 1) 30%, hsla(91, 32%, 48%, 1) 40%, hsla(94, 32%, 44%, 1) 50%, hsla(97, 32%, 39%, 1) 60%, hsla(100, 33%, 35%, 1) 70%, hsla(103, 33%, 33%, 1) 80%, hsla(108, 33%, 29%, 1) 90%, hsla(113, 33%, 26%, 1) 100%);
+  background: linear-gradient(90deg, #a9d36f 0%, #9ac365 10%, #8fb95f 20%, #86ae5b 30%, #79a253 40%, #6b944c 50%, #5c8344 60%, #4f773c 70%, #487038 80%, #3b6232 90%, #32582c 100%);
 }
 .people-s{
   background: linear-gradient(90deg, #47126bff, #822fafff, #c05299ff, #ea698bff, #f59059ff, #ffb627ff);
 }
 .browngreen-s{
-  background: linear-gradient(90deg, hsla(15, 78%, 26%, 1) 0%, hsla(23, 72%, 33%, 1) 10%, hsla(30, 69%, 39%, 1) 20%, hsla(37, 66%, 48%, 1) 30%, hsla(41, 77%, 55%, 1) 40%, hsla(44, 100%, 61%, 1) 50%, hsla(49, 61%, 51%, 1) 60%, hsla(55, 54%, 44%, 1) 70%, hsla(60, 50%, 40%, 1) 80%, hsla(70, 48%, 37%, 1) 90%, hsla(92, 45%, 32%, 1) 100%);;
+  background: linear-gradient(90deg, #75290f 0%, #954c18 10%, #b17020 20%, #cc8e28 30%, #e4ab2f 40%, #ffca38 50%, #c1ac33 60%, #a49e32 70%, #889130 80%, #6d842e 90%, #4f762d 100%);
 }
 .koopen{
-  background: linear-gradient(90deg, #f94144ff, #f3722cff, #ffbd00ff, #43aa8bff, #3a86ffff);;
+  background: linear-gradient(90deg, #f94144ff, #f3722cff, #ffbd00ff, #43aa8bff, #3a86ffff);
 }
 /*  Measurement size features */
 .celsius,
@@ -1758,9 +1758,6 @@ input:valid ~label{
     grid-area: 1 / 1 / 6 / 11;
     z-index: 0;
 }
-
-
-
 
 /*footer*/
 footer{

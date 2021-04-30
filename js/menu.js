@@ -1,12 +1,14 @@
 //Lateral buton active 
+
 const buttons = document.querySelectorAll('.item-button')
 buttons.forEach(button =>{
+
         button.addEventListener('click', function(){
+
             buttons.forEach(btn => btn.classList.remove('btn-active'));
         this.classList.add('btn-active');
-    });
+    })
 });
-
 
 // Open and Close submenu Discovery
 function openNav(){
@@ -18,10 +20,12 @@ function openNav(){
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
     document.getElementById('mobility-menu').style.width = "0";
+    document.getElementById('discovery').classList.add('btn-active')
     
 }
 function closeNav(){
     document.getElementById("discovery-menu").style.width = "0";
+    document.getElementById('discovery').classList.remove('btn-active')
 }
 
 // Open and Close submenu Distribution
@@ -34,10 +38,12 @@ function openNavdist(){
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
     document.getElementById('mobility-menu').style.width = "0";
+    document.getElementById('distribution').classList.add('btn-active')
 
 }
 function closeNavdist(){
     document.getElementById("distribution-menu").style.width = "0";
+    document.getElementById('distribution').classList.remove('btn-active')
 }
 
 // Open and Close submenu Vector
@@ -50,10 +56,12 @@ function openNavVec (){
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
     document.getElementById('mobility-menu').style.width = "0";
+    document.getElementById('vector').classList.add('btn-active')
 
 }
 function closeNavVec (){
     document.getElementById('vector-menu').style.width = "0";
+    document.getElementById('vector').classList.remove('btn-active')
 }
 // Open and Close submenu Climate
 function openNavCli (){
@@ -65,10 +73,12 @@ function openNavCli (){
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
     document.getElementById('mobility-menu').style.width = "0";
+    document.getElementById('climate').classList.add('btn-active')
 
 }
 function closeNavCli (){
     document.getElementById('climate-menu').style.width = "0";
+    document.getElementById('climate').classList.remove('btn-active')
 }
 
 // Open and Close submenu Forest cover
@@ -81,10 +91,12 @@ function openNavFor (){
     document.getElementById('climate-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
     document.getElementById('mobility-menu').style.width = "0";
+    document.getElementById('forest').classList.add('btn-active')
 
 }
 function closeNavFor (){
     document.getElementById('forestcover-menu').style.width = "0";
+    document.getElementById('forest').classList.remove('btn-active')
 }
 
 // Open and Close submenu Land cover
@@ -97,10 +109,12 @@ function openNavLan (){
     document.getElementById('climate-menu').style.width = "0";
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('mobility-menu').style.width = "0";
+    document.getElementById('land').classList.add('btn-active')
 
 }
 function closeNavLan (){
     document.getElementById('land-cover-menu').style.width = "0";
+    document.getElementById('land').classList.remove('btn-active')
 }
 
 // Open and Close submenu Land cover
@@ -113,14 +127,85 @@ function openNavMob (){
     document.getElementById('climate-menu').style.width = "0";
     document.getElementById('forestcover-menu').style.width = "0";
     document.getElementById('land-cover-menu').style.width = "0";
+    document.getElementById('mobility').classList.add('btn-active')
 
 }
 function closeNavMob (){
     document.getElementById('mobility-menu').style.width = "0";
+    document.getElementById('mobility').classList.remove('btn-active')
 }
 
+showChekedDis();
+var i =0;
+function showChekedDis(){
+    document.getElementById('check1').textContent = document.querySelectorAll("input[name=discovery]:checked").length;
+}
+document.querySelectorAll("input[name=discovery]").forEach(i =>{
+    i.onclick = function(){
+        showChekedDis();
+    }
+});
 
-
+showChekedDistri();
+var i =0;
+function showChekedDistri(){
+    document.getElementById('check2').textContent = document.querySelectorAll("input[name=distribution]:checked").length;
+}
+document.querySelectorAll("input[name=distribution]").forEach(i =>{
+    i.onclick = function(){
+        showChekedDistri();
+    }
+});
+showChekedVec();
+var i =0;
+function showChekedVec(){
+    document.getElementById('check3').textContent = document.querySelectorAll("input[name=vector]:checked").length;
+}
+document.querySelectorAll("input[name=vector]").forEach(i =>{
+    i.onclick = function(){
+        showChekedVec();
+    }
+});
+showChekedCli();
+var i =0;
+function showChekedCli(){
+    document.getElementById('check4').textContent = document.querySelectorAll("input[name=climate]:checked").length;
+}
+document.querySelectorAll("input[name=climate]").forEach(i =>{
+    i.onclick = function(){
+        showChekedCli();
+    }
+});
+showChekedFor();
+var i =0;
+function showChekedFor(){
+    document.getElementById('check5').textContent = document.querySelectorAll("input[name=forest]:checked").length;
+}
+document.querySelectorAll("input[name=forest]").forEach(i =>{
+    i.onclick = function(){
+        showChekedFor();
+    }
+});
+showChekedLand();
+var i =0;
+function showChekedLand(){
+    document.getElementById('check6').textContent = document.querySelectorAll("input[name=land]:checked").length;
+}
+document.querySelectorAll("input[name=land]").forEach(i =>{
+    i.onclick = function(){
+        showChekedLand();
+    }
+});
+showChekedMob();
+var i =0;
+function showChekedMob(){
+    document.getElementById('check7').textContent = document.querySelectorAll("input[name=mobility]:checked").length;
+}
+document.querySelectorAll("input[name=mobility]").forEach(i =>{
+    i.onclick = function(){
+        showChekedMob();
+    }
+});
 //Slider Js
 
 var months = [

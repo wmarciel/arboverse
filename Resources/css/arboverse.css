@@ -542,7 +542,25 @@ nav img{
   background-color: var(--light-hover);
 }
 .btn-active{
-background-color:#BCC5CF;
+background-color: #B9C8E3;
+}
+ .check{
+  width:16px;
+  height: 16px;
+  background-color: hsla(32, 100%, 50%, 0.7);
+  padding: 1px;
+  border-radius: 50%;
+  text-align: center;
+  color:white;
+  font-family: 'montserrat', serif;
+  position: absolute;
+  z-index: 10;
+  transform: translateX(-20px) translateY(-100%);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.check:hover{
+  background-color: hsla(32, 100%, 50%, 1);
 }
 .button-wrapper{
   display: flex;

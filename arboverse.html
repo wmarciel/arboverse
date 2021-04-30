@@ -490,42 +490,49 @@
                 <div id="menulateral">
                     <div class="item-button" id="discovery" onclick="openNav()">
                         <div class="button-wrapper">
+                            <id id="check1" class="check"></id>
                             <img src="Resources/images/icons aboverse/discovery-01.png">
                             <span>Discovery</span>
                         </div>
                     </div>
                     <div class="item-button" id="distribution" onclick="openNavdist()">
                         <div class="button-wrapper">
+                            <id id="check2" class="check"></id>
                             <img src="Resources/images/icons aboverse/Distribution-01.png">
                             <span>Distribution</span>
                         </div>
                     </div>
                     <div class="item-button" id="vector" onclick="openNavVec()">
                         <div class="button-wrapper">
+                            <id id="check3" class="check"></id>
                             <img src="Resources/images/icons aboverse/vector-01.png">
                             <span>Vector</span>
                         </div>
                     </div>
                     <div class="item-button" id="climate" onclick="openNavCli()">
                         <div class="button-wrapper">
+                            <id id="check4" class="check"></id>
                             <img src="Resources/images/icons aboverse/Untitled-5-01.png">
                             <span>Climate</span>
                         </div>
                     </div>
                     <div class="item-button" id="forest" onclick="openNavFor()">
-                        <div class="button-wrapper forest">
+                        <div class="button-wrapper">
+                            <id id="check5" class="check"></id>
                             <img src="Resources/images/icons aboverse/forest cover-01.png">
                             <span>Forest Cover & Deforestation</span>
                         </div>
                     </div>
                     <div class="item-button" id="land" onclick="openNavLan()">
                         <div class="button-wrapper">
+                            <id id="check6" class="check"></id>
                             <img src="Resources/images/icons aboverse/land cover-01.png">
                             <span>Land Use</span>
                         </div>
                     </div>
                     <div class="item-button" id="mobility" onclick="openNavMob()">
                         <div class="button-wrapper">
+                            <id id="check7" class="check"></id>
                             <img src="Resources/images/icons aboverse/Humanmobility-01.png">
                             <span>Human Mobility</span>
                         </div>
@@ -538,7 +545,7 @@
                     <div class="title-sub">
                         <div class="togglebtn">
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" name="discovery">
                                 <span class="slider round"></span>
                             </label>
                         </div>
@@ -573,7 +580,7 @@
                     <div class="title-sub">
                         <div class="togglebtn">
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" name="distribution">
                                 <span class="slider round"></span>
                             </label>
                         </div>
@@ -608,7 +615,7 @@
                     <div class="title-sub">
                         <div class="togglebtn">
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" name="vector">
                                 <span class="slider round"></span>
                             </label>
                         </div>
@@ -645,7 +652,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="climate">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -675,7 +682,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="climate">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -703,7 +710,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="climate">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -749,7 +756,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="climate">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -795,7 +802,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="forest">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -829,7 +836,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox" checked=false
+                                        <input type="checkbox"  name="forest" checked=false
                                             onclick="update_map(this, 'Tree-cover-loss-2001-2019')">
                                         <span class="slider round"></span>
                                     </label>
@@ -892,7 +899,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="forest">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -919,7 +926,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="forest">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -946,7 +953,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="forest">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -984,7 +991,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="forest">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -1036,7 +1043,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="land">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -1106,7 +1113,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="land">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -1138,7 +1145,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="land">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -1172,7 +1179,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="land">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -1224,7 +1231,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="land">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -1276,7 +1283,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="land">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -1318,7 +1325,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="mobility">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -1362,7 +1369,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="mobility">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>

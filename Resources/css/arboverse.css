@@ -610,6 +610,9 @@ background-color: #B9C8E3;
     margin-top: 0px;
     display: none;
   }
+  .check{
+    transform: translateX(-15px) translateY(-60%);
+  }
 }
 /* Mobile landscape side menu*/
 @media screen and (min-width:600px) and (max-width: 750px) and (orientation: landscape){
@@ -623,6 +626,9 @@ background-color: #B9C8E3;
   .button-wrapper span{
     margin-top: 0px;
     display: none;
+  }
+  .check{
+    transform: translateX(-20px) translateY(-50%);
   }
 }
 /*====== Second Side Menu =======*/

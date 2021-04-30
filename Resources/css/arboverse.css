@@ -516,8 +516,8 @@ nav img{
   width: 100%;
   overflow: hidden;
   display: grid;
-  grid-template-columns: [first] 80px [line2] 320px auto;
-  grid-template-rows:repeat(10, 1fr) ;
+  grid-template-columns: [first] 80px [line2] 320px 1fr 1fr;
+  grid-template-rows:95% 5% ;
 }
 
 /*Main side menu*/
@@ -526,7 +526,7 @@ nav img{
   flex-direction: column;
   width: 80px;
   text-align: center;
-  grid-area: 1 / 1 / 10 / 2;
+  grid-area: 1 / 1 / 3 / 2;
   z-index: 10;
   margin-left: 0px;
   margin-top: 0px;
@@ -562,14 +562,19 @@ background-color:#BCC5CF;
 }
 /* MOBILE main menu map*/
 @media screen and (max-width:600px){
+  .grid{
+    width:100%;
+    height:85vh;
+    grid-template-columns: [first] 320px 1fr;
+    grid-template-rows: 30% 60% 10% ;
+  }
   #menulateral{
     flex-direction:row;
     height: 45px;
     width:100%;
-    grid-area: 10 / 5 / 11 / 6;
+    grid-area: 3 / 1 / 4 / 3;
     flex-wrap: nowrap;
     position: relative;
-    bottom: 3vh;
     margin-left: 1px;
   }
   .item-button{
@@ -617,7 +622,7 @@ background-color:#BCC5CF;
     display: block;
     overflow-x: hidden;
     width: 0px; /*width declared in the js*/
-    grid-area: 1 / 2 / 2 / 4;
+    grid-area: 1 / 2 / 2 / 3;
     z-index: 10;
     position: relative;
     background-color: var(--light-main);
@@ -652,13 +657,10 @@ background-color:#BCC5CF;
   font-size: 30px;
   margin-left: 50px;
 }
-/* discovery, distribution*/
-.sub-1{
-  height: 260px;
-}
-/* Vector*/
+/* discovery, distribution and vector*/
+.sub-1,
 .sub-2{
-  height: 230px;
+  height: 260px;
 }
 /*Sub menu features*/
 /* Climate*/
@@ -668,7 +670,7 @@ background-color:#BCC5CF;
     overflow-x: hidden;
     display: block;
     height: 500px;
-    grid-area: 1 / 2 / 2 / 4;
+    grid-area: 1 / 2 / 2 / 3;
     z-index: 11;
     position: relative;
     background-color: var(--light-main);
@@ -703,7 +705,7 @@ background-color:#BCC5CF;
   display: block;
   overflow-x: hidden;
   height: 500px;
-  grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 2 / 2 / 3;
   z-index: 12;
   position: relative;
   background-color: var(--light-main);
@@ -714,35 +716,21 @@ background-color:#BCC5CF;
 .fa-info-circle:hover::before{
   color:rgb(116, 115, 115);
 }
-/* Adjust submenu, screen < 1200px*/
-@media screen and (max-width:1200px){
-    .sub-menu,
-    .sub-second-menu,
-    .sub-th-menu,
-    .sub-fou-menu{
-      right:0px;
-    }
-}
+
 /*MOBILE SUB_MENU*/
 @media screen and (max-width:600px){
-  .sub-menu{
-    width: 0px; /*width declared in the js*/
-    grid-area: 1 / 1 / 5 / 4;
-    right: 0px;
-    top: 40vh;
-  }
+  .sub-menu,
   .sub-second-menu{
-    grid-area: 1 / 1 / 5 / 4;
-    right: 0px;
-    top: 30vh;
-    height: 300px;
+    grid-area: 2 / 1 /3 /2;
+    align-self: end;
+    height: 280px;
   }
   .sub-th-menu,
-  .sub-fou-menu{
-    grid-area: 1 / 1 / 2 / 4;
-    right: 0px;
-    top: 30vh;
-    height: 300px;
+  .sub-fou-menu,
+  .sub-fiv-menu{
+    grid-area: 2 / 1 /3 /2;
+    align-self: end;
+    height: 280px;
   }
 }
 /* Lanscape submenu*/
@@ -752,12 +740,12 @@ background-color:#BCC5CF;
   }
   .sub-second-menu{
     right: 0px;
-    height: 230px;
+    height:260px;
   }
   .sub-th-menu,
-  .sub-fou-menu{
-    right: 0px;
-    height: 230px;
+  .sub-fou-menu,
+  .sub-fiv-menu{
+    height: 260px;
   }
 }
 /* ======== MODAL BOX =========*/
@@ -1752,11 +1740,11 @@ input:valid ~label{
   margin-bottom: 20px;
 }
 #map{
-    width: 100%;
+    width: 98%;
     position: relative;
     left: 0;
     height: 90vh;
-    grid-area: 1 / 1 / 6 / 11;
+    grid-area: 1 / 1 / 3 / 5;
     z-index: 0;
 }
 

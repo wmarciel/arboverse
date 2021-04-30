@@ -516,7 +516,8 @@ nav img{
   width: 100%;
   overflow: hidden;
   display: grid;
-  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+  grid-template-columns: [first] 80px [line2] 320px auto;
+  grid-template-rows:repeat(10, 1fr) ;
 }
 
 /*Main side menu*/
@@ -550,9 +551,6 @@ background-color:#BCC5CF;
   flex-direction: column;
 }
 /*Main button Image side menu*/
-.grid{
-  height: 100vh;
-}
 .button-wrapper img{
   width: 50%;
   height: 50%;
@@ -611,7 +609,7 @@ background-color:#BCC5CF;
   padding: 0 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .sub-menu{
@@ -623,7 +621,6 @@ background-color:#BCC5CF;
     z-index: 10;
     position: relative;
     background-color: var(--light-main);
-    right: 55px;
     transition: all 0.2s ease-in-out;
     opacity: 0;
 }
@@ -635,7 +632,7 @@ background-color:#BCC5CF;
     margin-bottom:10px;
     color: var(--blue);
     margin-top: 15px;
-    margin-left: 30px;
+    width:70%;
 }
 .closebtn{
   text-decoration: none;
@@ -675,7 +672,6 @@ background-color:#BCC5CF;
     z-index: 11;
     position: relative;
     background-color: var(--light-main);
-    right: 55px;
     transition: all 0.2s ease-in-out;
 }
 /* sub-menu head*/
@@ -711,7 +707,6 @@ background-color:#BCC5CF;
   z-index: 12;
   position: relative;
   background-color: var(--light-main);
-  right: 55px;
   scroll-behavior: smooth;
   overflow-y: scroll; 
   transition: all 0.2s ease-in-out;
@@ -1128,6 +1123,12 @@ color:var(--dark-text);
   align-items: center;
   justify-content: center;
 }
+.three-btn{
+  border: solid 1px red;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
 .togglebtn{
   display: flex;
   height: 40px;

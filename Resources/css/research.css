@@ -290,7 +290,16 @@ nav img{
     font-family: 'Montserrat', sans-serif, arial;
     color:#666569;
 }
-
+.img_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.img_wrapper figcaption{
+    font-family: 'Montserrat', serif;
+    font-size: 0.65rem;
+    width: 90%;
+}
 .researchunit{
     padding: 20px 20px;
     line-height: 1.5;
@@ -306,7 +315,7 @@ nav img{
     justify-content: space-around;
 }
 .researchdescription img {
-    width: 25%;
+    width: 90%;
 }
 .research-content{
     width: 70%;

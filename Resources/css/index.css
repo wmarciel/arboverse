@@ -289,6 +289,10 @@ nav img{
     }
     
 }
+/*general content*/
+.general_content{
+    margin: 10vh 0;
+}
 /*main content*/
 #main-content{
     padding: 90px 24px;
@@ -302,6 +306,7 @@ nav img{
     width: 70%;
     padding: 30px;
 }
+.general_content h2,
 .content h2{
     font-family: 'oswald', sans-serif;
     font-size: 1.8rem;
@@ -312,16 +317,20 @@ nav img{
     color: #002147;
     padding-bottom: 15px;
 }
+.general_content p,
 .content p{
     padding-top: 25px;
-    font-family: 'Quattrocento', Serif;
+    font-family: 'Montserrat', Serif;
     width: 90%;
     margin: 0 auto;
     color:#666569;
     line-height: 2;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     word-spacing: 2px;
     text-align: justify;
+}
+.content a{
+    color:#666569;
 }
 
 /*MAIN TABLET SIZE*/
@@ -329,9 +338,11 @@ nav img{
     #main-content{
         padding:30px 20px;
     }
+    .general_content h2,
     .content h2{
         font-size: 1.2rem;
     }
+    .general_content p,
     .content p{
         padding-top: 15px;
         line-height: 1.5;
@@ -391,7 +402,7 @@ section{
     padding: 10px 150px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 .purpose-unit{
     width: 30%;
@@ -402,19 +413,22 @@ section{
     line-height: 2;
 }
 .purpose-unit img{
-    width: 90px;
+    height: 90px;
     margin: 0 auto;
     padding: 20px;
 }
 .purpose-unit h4{
-    font-family: 'oswald', sans-serif;
+    font-family: 'montserrat', serif;
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #002147;
+}
+.orange{
+    color: #ff8700;
 }
 .purpose-unit h5{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
 }
 
@@ -436,7 +450,8 @@ section{
     }
     .purpose-unit img{
         margin-top: 0;
-        width:50px;
+        height:50px;
+        width:auto;
     }
     .purpose-unit h4{
         margin-top: 8px;
@@ -460,11 +475,12 @@ section{
         padding: 10px 3px;
     }
     .purpose-unit{
+        width: 33%;
         justify-content: flex-start;
     }
     .purpose-unit img{
         margin-top: 0;
-        width:40px;
+        height:60px;
     }
     .purpose-unit h4{
         margin-top: 8px;

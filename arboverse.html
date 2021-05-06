@@ -802,7 +802,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox" name="forest">
+                                        <input type="checkbox" name="forest" id="Deforestation-alerts-GLAD">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -825,7 +825,7 @@
                                 <div class="play-year-range">
                                     <button class="player"><i class="fa fa-play-circle"
                                             style="color: gray"></i></button><input type="range" min="2015" max="2021"
-                                        step="1" value="2015" class="playslider">
+                                        step="1" value="2015" class="playslider" onchange="">
                                 </div>
                             </div>
 
@@ -836,8 +836,7 @@
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox"  name="forest" checked=false
-                                            onclick="update_map(this, 'Tree-cover-loss-2001-2019')">
+                                        <input type="checkbox" name="forest" id="Tree-cover-loss-by-dominant-driver_1">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -1418,20 +1417,6 @@
                 <!--Menu js-->
                 <!--MAP-->
                 <div id="map"></div>
-                <script>
-                    //Here Map box Token na frente do =
-                    mapboxgl.accessToken = 'pk.eyJ1IjoiamFjcXVlbGluZXRpZGEiLCJhIjoiY2tteHllYXVxMGQ4cTJycWtsbm1wYnNlZSJ9.WhX4YKrMo49sd5dA_JIMMw';
-                    var map = new mapboxgl.Map({
-                        container: 'map',
-                        style: 'mapbox://styles/mapbox/light-v10', //type//
-                        center: [-110, 37.8],
-                        zoom: 1
-                    });
-                    // Add zoom and rotation controls to the map.
-                    map.addControl(new mapboxgl.NavigationControl());
-
-                </Script>
-
             </div>
         </div>
         <!--grid close-->
@@ -3481,8 +3466,8 @@
                 <a href="#map" class="modal__close">&times;</a>
             </div>
         </div>
-         <!--People -->
-         <div id="demo-modal3.5" class="modal">
+        <!--People -->
+        <div id="demo-modal3.5" class="modal">
             <div class="modal__content">
                 <!--Title-->
                 <div class="modal-title">
@@ -3800,30 +3785,37 @@
         <h2> We have been funded by</h2>
         <div class="hl4"></div>
     </div>
-        <div class="funders">
-            <a href="https://fapesp.br" target="_blank"><img src="Resources/images/Index/fapesp-2.png"/></a>
-            <a href="https://www.gov.br/cnpq/pt-br" target="_blank"><img src="Resources/images/Index/cnpq.png"/></a>
-        </div>
+    <div class="funders">
+        <a href="https://fapesp.br" target="_blank"><img src="Resources/images/Index/fapesp-2.png" /></a>
+        <a href="https://www.gov.br/cnpq/pt-br" target="_blank"><img src="Resources/images/Index/cnpq.png" /></a>
+    </div>
 </div>
 <!--Follow us-->
 <div id="socialmedia" class="mediacontent">
     <div class="media">
         <h5>Share the page</h5>
         <div class="share-icons">
-            <a href="https://twitter.com/intent/tweet?text=TITULO&url=LINK&via=SEUPERFIL" target="_blank" aria-label="Link to share the page on Twitter"><i class="fa fa-twitter fa-2x" style="color: white"></i></a>
-            <a href="https://twitter.com/intent/tweet?text=TITULO&url=LINK&via=SEUPERFIL" target="_blank" aria-label="Link to share the page on Facebook"><i class="fa fa-facebook fa-2x" style="color:white"></i></a>
+            <a href="https://twitter.com/intent/tweet?text=TITULO&url=LINK&via=SEUPERFIL" target="_blank"
+                aria-label="Link to share the page on Twitter"><i class="fa fa-twitter fa-2x"
+                    style="color: white"></i></a>
+            <a href="https://twitter.com/intent/tweet?text=TITULO&url=LINK&via=SEUPERFIL" target="_blank"
+                aria-label="Link to share the page on Facebook"><i class="fa fa-facebook fa-2x"
+                    style="color:white"></i></a>
         </div>
     </div>
     <div class="media">
         <h5>Follow us</h5>
-            <div class="share-icons">
-             <a href="https://twitter.com/wmarciels" target="_blank" aria-label="Link to Follow the Arboverse page on Twitter"><i class="fa fa-twitter fa-2x" style="color: white;"></i></a>
-            </div>
+        <div class="share-icons">
+            <a href="https://twitter.com/wmarciels" target="_blank"
+                aria-label="Link to Follow the Arboverse page on Twitter"><i class="fa fa-twitter fa-2x"
+                    style="color: white;"></i></a>
+        </div>
     </div>
     <div class="media">
         <h5>Contact us</h5>
-            <div class="share-icons">
-                <a href="mailto:wmarciel@hotmail.com" aria-label="Link to send an e-mail to Arboverse"><i class="fa fa-envelope fa-2x" style="color: white;"></i></a>
+        <div class="share-icons">
+            <a href="mailto:wmarciel@hotmail.com" aria-label="Link to send an e-mail to Arboverse"><i
+                    class="fa fa-envelope fa-2x" style="color: white;"></i></a>
         </div>
     </div>
 </div>

@@ -184,6 +184,7 @@ function showChekedFor(){
 document.querySelectorAll("input[name=forest]").forEach(i =>{
     i.onclick = function(){
         showChekedFor();
+        update_map(this)
     }
 });
 showChekedLand();

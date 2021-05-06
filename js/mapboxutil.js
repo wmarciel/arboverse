@@ -1,6 +1,6 @@
 // TO MAKE THE MAP APPEAR YOU MUST ADD YOUR ACCESS TOKEN FROM
 // https://account.mapbox.com
-mapboxgl.accessToken = 'pk.eyJ1IjoiamFjcXVlbGluZXRpZGEiLCJhIjoiY2tteHllYXVxMGQ4cTJycWtsbm1wYnNlZSJ9.WhX4YKrMo49sd5dA_JIMMw';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYXJib3ZlcnNlIiwiYSI6ImNrbXA2ODdnMzJibDAycXF1ODc2dmJtNngifQ';
 
 // declare an async function that calls an API endpoint for dataset metadata
 // takes one parameter
@@ -53,18 +53,24 @@ const getTileLayerUrlForTreeCoverLoss = (obj) => {
     let url = layerConfig['source']['tiles'][0];
     // substitute default parameters iteratively
     for (const param of defaultParams) {
-        url = url.replace('{' + param['key'] + '}', param['default'].toString());
+        url = url.replace('{' + param['key'] + '}', 30);
     }
-    return url;
+
+    var slug = obj['data']['attributes']['layer'][0]['attributes']['slug']
+
+    return [slug, url]
 }
 
+const getTileLayerUrlForDeforestationAlerts = (obj) => {
+    // drill down to get a useful object
+    const layerConfig = obj['data']['attributes']['layer'][1]['attributes']['layerConfig'];
 
-// declare a funciton that can get a simple identifier for a layer
-// takes one parameter
-//   (obj) the API response data from `callApiDatasetMetadata`
-// returns a string
-const getLayerSlug = (obj) => {
-    return obj['data']['attributes']['layer'][0]['attributes']['slug'];
+    // get the full templated URL
+    let url = layerConfig['source']['tiles'][0];
+
+    var slug = obj['data']['attributes']['layer'][1]['attributes']['slug']
+
+    return [slug, url];
 }
 
 // declare a function that can add a raster tile layer to a Mapbox map
@@ -79,7 +85,7 @@ const addTileLayerToMap = (mapVar, title, url) => {
         'tiles': [
             url
         ],
-        'tilesize': 256
+        'tilesize': 10
     });
     // then add the layer, referencing the source
     mapVar.addLayer({
@@ -87,7 +93,8 @@ const addTileLayerToMap = (mapVar, title, url) => {
         'type': 'raster',
         'source': title,
         'paint': {
-            'raster-opacity': 1  // let mapbox baselayer peak through
+            'raster-opacity': 0.5,  // let mapbox baselayer peak through
+            'raster-contrast': 1
         }
     });
     mapVar.setLayoutProperty(
@@ -95,6 +102,7 @@ const addTileLayerToMap = (mapVar, title, url) => {
         'visibility',
         'none'
     );
+    console.log(title + ' -- ' + url)
 }
 
 
@@ -102,8 +110,8 @@ const addTileLayerToMap = (mapVar, title, url) => {
 // var map = new mapboxgl.Map({
 // ...
 
-function update_map(cb, layer) {
-    var clickedLayer = layer;
+function update_map(cb) {
+    var clickedLayer = cb.id;
 
     if (cb.checked){
         map.setLayoutProperty(
@@ -118,7 +126,7 @@ function update_map(cb, layer) {
             'none'
         );
     }
-    
+    console.log(cb)
     console.log(cb.checked);
 }
 
@@ -127,16 +135,32 @@ function update_map(cb, layer) {
 // run the API call once the map is loaded (API call is asnyc)
 map.on('load', async () => {
     // declare the Dataset ID
-    const datasetId = 'b584954c-0d8d-40c6-859c-f3fdf3c2c5df';
+    const datasetIdDeforestationAlert = 'bfd1d211-8106-4393-86c3-9e1ab2ee1b9b';
+    const datasetIdTreeCoverLoss = 'f23a1803-ba17-4fe3-a1ad-39abfbfb56c6';
     // fetch remote dataset metadata
-    const metadata = await callApiDatasetMetadata(datasetId);
+    var metadata = await callApiDatasetMetadata(datasetIdDeforestationAlert);
     // display the response metadata
     // get an identifier
-    const slug = getLayerSlug(metadata);
-    console.log(slug)
     // get the tile layer URL from full API response data
-    const tileLayerUrl = getTileLayerUrlForTreeCoverLoss(metadata);
+    var tileLayer = getTileLayerUrlForDeforestationAlerts(metadata);
+
+    var slug = tileLayer[0];
+    var url = tileLayer[1];
+    
     // add a layer to the map
-    addTileLayerToMap(map, slug, tileLayerUrl);
-    addTileLayerToMap(map, 'teste', 'https://api.gbif.org/v2/map/occurrence/density/{z}/{x}/{y}@1x.png?style=purpleYellow.point')
+    addTileLayerToMap(map, slug, url);
+
+    var metadata = await callApiDatasetMetadata(datasetIdTreeCoverLoss);
+    // display the response metadata
+    // get an identifier
+    // get the tile layer URL from full API response data
+    var tileLayer = getTileLayerUrlForTreeCoverLoss(metadata);
+
+    var slug = tileLayer[0];
+    var url = tileLayer[1];
+
+    // add a layer to the map
+    addTileLayerToMap(map, slug, url);
+
+    //addTileLayerToMap(map, 'teste', 'https://api.gbif.org/v2/map/occurrence/density/{z}/{x}/{y}@1x.png?style=purpleYellow.point')
 });

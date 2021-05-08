@@ -3,13 +3,13 @@ body{
     font-family: 'Montserrat', sans-serif;
     background-color: hsl(0, 0%, 98%);
     margin: 0 auto;
+    overscroll-behavior: none;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: 0;
   }
-
 /*NAVIGATOR*/
 
 /*Banner*/

@@ -45,7 +45,7 @@
             let scrollPrevisous = window.pageYOffset;
             window.onscroll = function () {
                 let scrollCurent = window.pageYOffset;
-                if (scrollPrevisous > scrollCurent) {
+                if (scrollPrevisous > scrollCurent || scrollPrevisous < 0) {
                     navbar.style.top = "0px";
                 } else {
                     navbar.style.top = "-90px";
@@ -79,7 +79,7 @@
                             </div>
                         </div>
                         <p> EMBO offers two year fellowships with a focus on international exchange. As such, movement between countries is a prerequisite of this biannual fellowship.</p>
-                        <button class="read"><a href="#">Read More</a></button>
+                        <a href="#"><button class="read">Read more</button></a>
                     </div>
                 </div>
                 <div class="mural-unit">
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                         <p> EMBO offers two year fellowships with a focus on international exchange. As such, movement between countries is a prerequisite of this biannual fellowship.</p>
-                        <button class="read"><a href="#">Read More</a></button>
+                        <a href="#"><button class="read">Read more</button></a>
                     </div>
                 </div>
                 <div class="mural-unit">
@@ -117,7 +117,7 @@
                             </div>
                         </div>
                         <p> EMBO offers two year fellowships with a focus on international exchange. As such, movement between countries is a prerequisite of this biannual fellowship.</p>
-                        <button class="read"><a href="#">Read More</a></button>
+                        <a href="#"><button class="read">Read more</button></a>
                     </div>
                 </div>
                 <div class="mural-unit">
@@ -136,7 +136,7 @@
                             </div>
                         </div>
                         <p> EMBO offers two year fellowships with a focus on international exchange. As such, movement between countries is a prerequisite of this biannual fellowship.</p>
-                        <button class="read"><a href="#">Read More</a></button>
+                        <a href="#"><button class="read">Read more</button></a>
                     </div>
                 </div>
             </div>

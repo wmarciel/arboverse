@@ -293,6 +293,17 @@ nav img{
 .general_content{
     margin: 10vh 0;
 }
+.general_content p {
+    width: 85%;
+    padding-top: 25px;
+    font-family: 'Montserrat', Serif;
+    margin: 0 auto;
+    color:#666569;
+    line-height: 2;
+    font-size: 1.2rem;
+    word-spacing: 2px;
+    text-align: justify
+}
 /*main content*/
 #main-content{
     padding: 90px 24px;
@@ -317,7 +328,6 @@ nav img{
     color: #002147;
     padding-bottom: 15px;
 }
-.general_content p,
 .content p{
     padding-top: 25px;
     font-family: 'Montserrat', Serif;

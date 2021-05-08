@@ -42,7 +42,7 @@
             let scrollPrevisous = window.pageYOffset;
             window.onscroll = function () {
                 let scrollCurent = window.pageYOffset;
-                if (scrollPrevisous > scrollCurent) {
+                if (scrollPrevisous > scrollCurent || scrollPrevisous < 0) {
                     navbar.style.top = "0px";
                 } else {
                     navbar.style.top = "-90px";

@@ -668,7 +668,7 @@
                             <div class="measure">
                                 <div class="bar-mesur bluetopink"></div>
                                 <div class="indice">
-                                    <label class="celsius">-50˚C </label>
+                                    <label class="celsius">-70˚C </label>
                                     <label class="celsius">0˚C </label>
                                     <label class="celsius">50˚C </label>
                                 </div>
@@ -698,94 +698,211 @@
                                 <div class="bar-mesur lightyellowgreen"></div>
                                 <div class="indice">
                                     <label class="cubicmm">0mm<sup>3</sup></label>
-                                    <label class="cubicmm">250mm<sup>3</sup></label>
+                                    <label class="cubicmm">3000mm<sup>3</sup></label>
                                 </div>
                                 <!--indice close-->
                             </div>
                             <!--measure close -->
                         </div>
-                        <!--unit-btn close-->
-                        <!--Humidity-->
+                        <!--Time selector-->
+                        <div id="time-month-wrapper">
+                            <form action="/p/quote.php" method="get">
+                                <h5 id="form-title">Select layer time</h5>
+                                <h5 id="form-title">(temperature and precipitation)</h5>
+                                <div id="time-amount-slider">
+                                    <input type="radio" name="time-amount" id="tp-1" value="tp-1" required>
+                                    <label for="tp-1" data-time-amount="Present (1970-2000)"></label>
+                                    <input type="radio" name="time-amount" id="tp-2" value="tp-2" required>
+                                    <label for="tp-2" data-time-amount="Future (2081-2100)"></label>
+                                </div>
+                                <div id="month-amount-slider">
+                                    <input type="radio" name="month-amount" id="m-1" value="m-1" required>
+                                    <label for="m-1" data-time-amount="Jan"></label>
+                                    <input type="radio" name="month-amount" id="m-2" value="m-2" required>
+                                    <label for="m-2" data-time-amount="Feb"></label>
+                                    <input type="radio" name="month-amount" id="m-3" value="m-3" required>
+                                    <label for="m-3" data-time-amount="Mar"></label>
+                                    <input type="radio" name="month-amount" id="m-4" value="m-4" required>
+                                    <label for="m-4" data-time-amount="Apr"></label>
+                                    <input type="radio" name="month-amount" id="m-5" value="m-5" required>
+                                    <label for="m-5" data-time-amount="May"></label>
+                                    <input type="radio" name="month-amount" id="m-6" value="m-6" required>
+                                    <label for="m-6" data-time-amount="Jun"></label>
+                                    <input type="radio" name="month-amount" id="m-7" value="m-7" required>
+                                    <label for="m-7" data-time-amount="Jul"></label>
+                                    <input type="radio" name="month-amount" id="m-8" value="m-8" required>
+                                    <label for="m-8" data-time-amount="Aug"></label>
+                                    <input type="radio" name="month-amount" id="m-9" value="m-9" required>
+                                    <label for="m-9" data-time-amount="Sep"></label>
+                                    <input type="radio" name="month-amount" id="m-10" value="m-10" required>
+                                    <label for="m-10" data-time-amount="Oct"></label>
+                                    <input type="radio" name="month-amount" id="m-11" value="m-11" required>
+                                    <label for="m-11" data-time-amount="Nov"></label>
+                                    <input type="radio" name="month-amount" id="m-12" value="m-12" required>
+                                    <label for="m-12" data-time-amount="Dec"></label>
+                                </div>
+                            </form>
+                        </div>
+                        <!--Koppen Geiger -->
                         <div class="unit-btn">
                             <div class="unit-toggle">
                                 <div class="togglebtn">
                                     <label class="switch">
-                                        <input type="checkbox" name="climate">
+                                        <input type="checkbox" name="climate" />
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
-                                <!--toggle close-->
-                                <h6>Humidity</h6>
-                                <div class="wrapper tooltip">
-                                    <a href="#demo-modal1.2"><i class="fa fa-info-circle" style="color:gray"></i></a>
-                                    <span class="tooltext">Humidity month average according to selected year and
-                                        month</span>
-                                </div>
-                            </div><!-- unit-toggle close-->
-                            <div class="measure">
-                                <div class="bar-mesur purple"></div>
-                                <div class="indice">
-                                    <label class="percentage">25%</label>
-                                    <label class="percentage">80%</label>
-                                </div>
-                                <!--indice close-->
-                            </div>
-                            <!--measure close -->
-                        </div>
-                        <!--unit-btn close-->
-                        <!--MENU climate TIMELINE-->
-                        <div class="menu-timeslider">
-                            <h6>Date (Year and Month)</h6>
-                            <div class="map-timeline">
-                                <!--Slide Range Year-->
-                                <div class="range-value slidecontainer" id="rangeV"></div>
-                                <input id="range" type="range" min="1970" max="2100" value="1970" step="1"
-                                    class="slideyear">
-                            </div>
-                            <!--map-timeline closer-->
-                            <!--Slide Range month my month-->
-                            <div class="slidecontainer">
-                                <label id="month" class="legend"></label>
-                                <input type="range" min="0" max="11" value="0" class="slidemonth" id="myRange">
-                            </div>
-                            <!--slidecontainer close-->
-                        </div>
-                        <!--menu-timeslider closer-->
-                        <!--Koppen-geiger climate-->
-                        <div class="unit-btn">
-                            <div class="unit-toggle">
-                                <div class="togglebtn">
-                                    <label class="switch">
-                                        <input type="checkbox" name="climate">
-                                        <span class="slider round"></span>
-                                    </label>
-                                </div>
-                                <!--toggle close-->
                                 <h6>Köppen-Geiger Classification</h6>
                                 <div class="wrapper tooltip">
-                                    <a href="#demo-modal1.3"><i class="fa fa-info-circle" style="color:gray"></i></a>
-                                    <span class="tooltext">Köppen-Geiger climate classification updated
-                                    </span>
+                                    <a href="#demo-modal1.1"><i class="fa fa-info-circle" style="color: gray"></i></a>
+                                    <span class="tooltext">Köppen-Geiger climate classification for the present day
+                                        (1980-2016) and for projected future conditions (2071-2100).</span>
                                 </div>
-                            </div><!-- unit-toggle close-->
-                            <div class="measure">
-                                <div class="bar-mesur koopen"></div>
-                                <div class="indice">
-                                    <label class="k-g">Equatorial</label>
-                                    <label class="k-g">Arid</label>
-                                    <label class="k-g">Warm</label>
-                                    <label class="k-g">Snow</label>
-                                    <label class="k-g">Polar</label>
-                                </div>
-                                <!--indice close-->
                             </div>
-                            <!--measure close -->
-                            <div class="range-player">
-                                <!--Add Buttom play here-->
-                                <div class="play-year-range">
-                                    <button class="player"><i class="fa fa-play-circle"
-                                            style="color: gray"></i></button><input type="range" min="1970" max="2100"
-                                        step="1" value="1970" class="playslider">
+                            <!--Time selector-->
+                            <div id="time-wrapper">
+                                <form action="/p/quote.php" method="get">
+                                    <h5 id="form-title">Select layer time</h5>
+                                    <div id="time-amount-slider">
+                                        <input type="radio" name="time-amount" id="kp-1" value="kp-1" required>
+                                        <label for="kp-1" data-time-amount="Present (1980-2016)"></label>
+                                        <input type="radio" name="time-amount" id="kp-2" value="kp-2" required>
+                                        <label for="kp-2" data-time-amount="Future (2071-2100)"></label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="kp_measure">
+                                <div class="kp_group">
+                                    <div class="kp_unit">
+                                        <div class="kp_circle am"></div>
+                                        <label class="kp">Am</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle aw"></div>
+                                        <label class="kp">Aw</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle af"></div>
+                                        <label class="kp">Af</label>
+                                    </div>
+                                </div>
+                                <div class="kp_group">
+                                    <div class="kp_unit">
+                                        <div class="kp_circle bwh"></div>
+                                        <label class="kp">BWh</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle bwk"></div>
+                                        <label class="kp">BWk</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle bsh"></div>
+                                        <label class="kp">BSh</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle bsk"></div>
+                                        <label class="kp">BSk</label>
+                                    </div>
+                                </div>
+                                <div class="kp_group">
+                                    <div class="kp_unit">
+                                        <div class="kp_circle csa"></div>
+                                        <label class="kp">Csa</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle csb"></div>
+                                        <label class="kp">Csb</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle csc"></div>
+                                        <label class="kp">Csc</label>
+                                    </div>
+                                </div>
+                                <div class="kp_group">
+                                    <div class="kp_unit">
+                                        <div class="kp_circle cwa"></div>
+                                        <label class="kp">Cwa</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle cwb"></div>
+                                        <label class="kp">Cwb</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle cwc"></div>
+                                        <label class="kp">Cwc</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle cfa"></div>
+                                        <label class="kp">Cfa</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle cfb"></div>
+                                        <label class="kp">Cfb</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle cfc"></div>
+                                        <label class="kp">Cfc</label>
+                                    </div>
+                                </div>
+                                <div class="kp_group">
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dsa"></div>
+                                        <label class="kp">Dsa</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dsb"></div>
+                                        <label class="kp">Dsb</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dsc"></div>
+                                        <label class="kp">Dsc</label>
+                                    </div>
+                                </div>
+                                <div class="kp_group">
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dwa"></div>
+                                        <label class="kp">Dwa</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dwb"></div>
+                                        <label class="kp">Dwb</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dwc"></div>
+                                        <label class="kp">Dwc</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dwd"></div>
+                                        <label class="kp">Dwd</label>
+                                    </div>
+                                </div>
+                                <div class="kp_group">
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dfa"></div>
+                                        <label class="kp">Dfa</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dfb"></div>
+                                        <label class="kp">Dfb</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dfc"></div>
+                                        <label class="kp">Dfc</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle dfd"></div>
+                                        <label class="kp">Dfd</label>
+                                    </div>
+                                </div>
+                                <div class="grou_kp">
+                                    <div class="kp_unit">
+                                        <div class="kp_circle et"></div>
+                                        <label class="kp">ET</label>
+                                    </div>
+                                    <div class="kp_unit">
+                                        <div class="kp_circle ef"></div>
+                                        <label class="kp">EF</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -820,17 +937,58 @@
                                 <div class="point pink-orange"></div>
                                 <labe class="point-mean">GLAD alerts</labe>
                             </div>
-                            <div class="range-player">
-                                <!--Add Buttom play here-->
-                                <div class="play-year-range">
-                                    <button class="player"><i class="fa fa-play-circle"
-                                            style="color: gray"></i></button><input type="range" min="2015" max="2021"
-                                        step="1" value="2015" class="playslider" onchange="">
-                                </div>
-                            </div>
-
                         </div>
-                        <!--unit btn close-->
+                        
+                            <!--time selector-->
+                            <div id="year-time-wrapper">
+                                <form action="/p/quote.php" method="get">
+                                    <h5 id="form-title">Select layer time</h5>
+                                    <div id="time-year-slider">
+                                        <input type="radio" name="year-amount" id="d-1" value="d-1" required>
+                                        <label for="d-1" data-time-amount="2001"></label>
+                                        <input type="radio" name="year-amount" id="d-2" value="d-2" required>
+                                        <label for="d-2" data-time-amount="2002"></label>
+                                        <input type="radio" name="year-amount" id="d-3" value="d-3" required>
+                                        <label for="d-3" data-time-amount="2003"></label>
+                                        <input type="radio" name="year-amount" id="d-4" value="d-4" required>
+                                        <label for="d-4" data-time-amount="2004"></label>
+                                        <input type="radio" name="year-amount" id="d-5" value="d-5" required>
+                                        <label for="d-5" data-time-amount="2005"></label>
+                                        <input type="radio" name="year-amount" id="d-6" value="d-6" required>
+                                        <label for="d-6" data-time-amount="2006"></label>
+                                        <input type="radio" name="year-amount" id="d-7" value="d-7" required>
+                                        <label for="d-7" data-time-amount="2007"></label>
+                                        <input type="radio" name="year-amount" id="d-8" value="d-8" required>
+                                        <label for="d-8" data-time-amount="2008"></label>
+                                        <input type="radio" name="year-amount" id="d-9" value="d-9" required>
+                                        <label for="d-9" data-time-amount="2009"></label>
+                                        <input type="radio" name="year-amount" id="d-10" value="d-10" required>
+                                        <label for="d-10" data-time-amount="2010"></label>
+                                    </div>
+                                    <div id="time-year-slider">
+                                        <input type="radio" name="year-amount" id="d-11" value="d-11" required>
+                                        <label for="d-11" data-time-amount="2011"></label>
+                                        <input type="radio" name="year-amount" id="d-12" value="d-12" required>
+                                        <label for="d-12" data-time-amount="2012"></label>
+                                        <input type="radio" name="year-amount" id="d-13" value="d-13" required>
+                                        <label for="d-13" data-time-amount="2013"></label>
+                                        <input type="radio" name="year-amount" id="d-14" value="d-14" required>
+                                        <label for="d-14" data-time-amount="2004"></label>
+                                        <input type="radio" name="year-amount" id="d-15" value="d-15" required>
+                                        <label for="d-15" data-time-amount="2015"></label>
+                                        <input type="radio" name="year-amount" id="d-16" value="d-16" required>
+                                        <label for="d-16" data-time-amount="2016"></label>
+                                        <input type="radio" name="year-amount" id="d-17" value="d-17" required>
+                                        <label for="d-17" data-time-amount="2017"></label>
+                                        <input type="radio" name="year-amount" id="d-18" value="d-18" required>
+                                        <label for="d-18" data-time-amount="2018"></label>
+                                        <input type="radio" name="year-amount" id="d-19" value="d-19" required>
+                                        <label for="d-19" data-time-amount="2019"></label>
+                                        <input type="radio" name="year-amount" id="d-20" value="d-20" required>
+                                        <label for="d-20" data-time-amount="2020"></label>
+                                    </div>
+                                </form>
+                            </div>
                         <!--Tree Cover Loss by dominante driver-->
                         <div class="unit-btn2">
                             <div class="unit-toggle">
@@ -852,11 +1010,11 @@
                             </div>
                             <!--Unit toggle close-->
                             <div class="marker">
-                                <div class="point neonblue-p"></div>
+                                <div class="point comod"></div>
                                 <labe class="point-mean">Commodity driven deforestation</labe>
                             </div>
                             <div class="marker">
-                                <div class="point patriarch-p"></div>
+                                <div class="point shift"></div>
                                 <labe class="point-mean">Shifting agriculture</labe>
                             </div>
                             <div class="marker">
@@ -871,26 +1029,6 @@
                                 <div class="point blush-p"></div>
                                 <labe class="point-mean">Urbanization</labe>
                             </div>
-                            <div class="canopy">
-                                <p>Displaying Tree cover loss by dominant driver with<select class="canopy-percentage">
-                                        <option>>10%</option>
-                                        <option>>15%</option>
-                                        <option>>20%</option>
-                                        <option>>25%</option>
-                                        <option>>30%</option>
-                                        <option>>50%</option>
-                                        <option>>75%</option>
-                                    </select> canopy density</p>
-                            </div>
-                            <div class="range-player">
-                                <!--Add Buttom play here-->
-                                <div class="play-year-range">
-                                    <button class="player"><i class="fa fa-play-circle"
-                                            style="color: gray"></i></button><input type="range" min="2001" max="2019"
-                                        step="1" value="2001" class="playslider">
-                                </div>
-                            </div>
-
                         </div>
                         <!--unit btn close-->
                         <!--Primary Forest cover-->
@@ -942,7 +1080,7 @@
                                 <div class="bar-mesur green-s"></div>
                                 <div class="indice">
                                     <label class="percentage">3m</label>
-                                    <label class="percentage">30m</label>
+                                    <label class="percentage">&ge; 30m</label>
                                 </div>
                             </div>
                         </div>

@@ -333,7 +333,7 @@
 
 !function () {
 	var data = [
-		{eventName: 'Smile Grant', calendar: 'Grants', color: 'orange',eventTime: moment("2021-05-16")},
+		{eventName: 'SAd Grant', calendar: 'Grants', color: 'orange',eventTime: moment("2021-05-16")},
 
 		{eventName: 'London Felloship', calendar: 'Fellowships', color: 'blue', eventTime: moment("2021-05-17")},
 

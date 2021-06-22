@@ -2309,7 +2309,7 @@ form:valid #time-year-slider input:checked + label::before {
       font-size: 1.2rem;
   }
   .funders img{
-      width:100px;
+      width:150px;
   }
 }
 /*FUNDING MOBILE SIZE*/
@@ -2319,7 +2319,7 @@ form:valid #time-year-slider input:checked + label::before {
       font-size: 0.9rem;
   }
   .funders img{
-      width:100px;
+      width:150px;
   }
   .hl4{
       margin-bottom: 2%;

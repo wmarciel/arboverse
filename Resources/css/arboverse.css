@@ -2342,7 +2342,13 @@ form:valid #time-year-slider input:checked + label::before {
   padding-top: 60px;
   text-align: center;
 }
-.media h5{
+.media{
+  width:15%;
+  display: block;
+  padding-top: 60px;
+  text-align: center;
+}
+.media h4{
   font-family: 'Montserrat', sans serif, arial;
   font-weight: 400;
   font-size: 1rem;
@@ -2352,15 +2358,30 @@ form:valid #time-year-slider input:checked + label::before {
   width: 80%;
   margin: 0 auto;
 }
+.share-icons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.icon_unit{
+  display: flex;
+  flex-direction: row;
+}
+.share-icons a{
+  color:white;
+  text-decoration: none;
+  margin: 0 10px;
+}
 .share-icons i{
-  padding: 10px;
+  margin-right: 5px;
 }
 /*SOCIAL MEDIA TABLET SIZE*/
 @media screen and (max-width: 900px){
   .media{
       width: 20%;
   }
-  .media h5{
+  .media h4{
       font-size: 0.9rem;
   }
 }
@@ -2389,7 +2410,7 @@ form:valid #time-year-slider input:checked + label::before {
 /*footer*/
 footer{
     background-color: hsla(0, 0%, 35%,0.7);
-    font-family: robot, sans-serif, arial;
+    font-family: roboto, sans-serif, arial;
     color: white;
     display: flex;
     justify-content: space-between;
